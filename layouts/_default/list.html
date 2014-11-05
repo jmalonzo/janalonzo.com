@@ -1,0 +1,51 @@
+{{ partial "header.html" . }}
+
+<div id="layout" class="pure-g">
+    {{ partial "sidebar.html" . }}
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div class="pure-u-1 pure-u-md-3-5">
+            <!-- A wrapper for all content -->
+            {{ range .Data.Pages }}{{ if ne .Section "page" }}
+            <!-- wrapper for photos -->
+            {{ if eq .Section "photos" }}
+            <section class="photo">
+              <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
+              <div class="post-description">
+                <article class="caption">
+                  {{ .Content }}
+                  <div class="caption__overlay">
+                    <h2 class="caption__overlay__title"><a class="photo-title" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <p class="caption__overlay__content">
+                      {{ if isset .Params "categories" }}
+                      {{ range .Params.categories }}<a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>{{ end }}{{ end }}
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </section>
+            {{ else }} <!-- wrapper for blog posts -->
+            <section class="post">
+              <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
+              <header class="post-header">
+                <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
+              </header>
+              <div class="post-description">
+                {{ .Content }}
+              </div>
+              <p class="post-meta">
+                {{ with .Params.author }}
+                By <strong class="post-author">{{ . }}</strong>
+                {{ end }}
+                {{ if isset .Params "categories" }}
+                {{ range .Params.categories }}<a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>{{ end }}
+                {{ end }}
+              </p>
+            </section>
+            {{ end }}
+            {{ end }}{{ end }}
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</div>
+{{ partial "end.html" . }}

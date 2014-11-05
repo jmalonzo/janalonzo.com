@@ -1,0 +1,21 @@
+{
+  "name": "janalonzo.info",
+  "version": "0.1.0",
+  "authors": [
+    "Jan Alonzo <jmalonzo@gmail.com>"
+  ],
+  "description": "My personal site",
+  "keywords": [
+    "website"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.janalonzo.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

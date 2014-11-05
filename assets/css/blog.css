@@ -1,0 +1,329 @@
+/*
+When setting the primary font stack, apply it to the Pure grid units along
+with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
+specific font stacks to ensure the greatest OS/browser compatibility.
+*/
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: "Open Sans", serif;
+}
+
+html {
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: fixed;
+   background-image: url("/assets/bg.jpg");
+   background-color: #fff;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(61, 146, 201);
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+/* LAYOUT CSS */
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+#layout {
+   padding: 0;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
+
+.sidebar {
+   background: rgba(238, 238, 238, 0.8);
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+   color: #3e50b4;
+   opacity: 1;
+}
+
+.profile-photo {
+   background-image: url("/assets/profile.png");
+   width: 128px;
+   height: 128px;
+   border-radius: 69px;
+   border: 5px solid rgba(238, 238, 238, 0.8);;
+   margin-left: auto;
+   margin-right: auto;
+   background-repeat: no-repeat;
+   overflow: hidden;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+}
+.brand-title a{
+    color:#3e50b4;
+}
+.brand-title a:hover{
+    text-decoration: none;
+}
+.brand-tagline {
+    font-weight: 300;
+/*    color: rgb(176, 202, 219);*/
+   color:rgb(200,100,50);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+   display: inline-block;
+   zoom: 1;
+}
+.nav-item a {
+   background: transparent;
+   color: #3e50b4;
+   margin-top: 1em;
+   opacity: 0.5;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+/*    border: 2px solid rgb(61, 146, 201);*/
+    text-decoration: none;
+}
+
+.content-subhead {
+   text-transform: uppercase;
+   color: #333;
+   border-bottom: 1px solid #eee;
+   padding: 0.4em 0;
+   padding-left: 0.4em;
+   font-size: 80%;
+   font-weight: 500;
+   letter-spacing: 0.1em;
+}
+
+.content {
+   padding: 2em 1em 0;
+}
+
+.photo p {
+   margin-top: 0;
+   margin-bottom: 0;
+   padding: 0;
+}
+.photo img {
+   max-height: 100%;
+   max-width: 100%;
+   box-shadow:  0 0 1em #777;
+   -webkit-box-shadow:  0 0 1em #777;
+   -moz-box-shadow: 0 0 1em #777;
+}
+
+.post, .photo {
+   padding-left: 0em;
+   padding-right: 0em;
+   padding-bottom: 0em;
+   /** my additions **/
+   background-color: rgba(255,255,255,0.8);
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+}
+.post-title {
+   font-size: 1.2em;
+   color: #333;
+   margin: 0.4em 0;
+   font-family: "Open Sans", sans-serif;
+   font-weight: bold;
+   text-transform: lowercase;
+}
+.post-title:hover{
+    text-decoration: none;
+}
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+.post-description {
+    font-family: "Open Sans", serif;
+    color: #333;
+}
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-category {
+   margin: 0 0.1em;
+   padding: 0.3em 0.3em;
+   color: #fff;
+   background: transparent;
+   font-size: 80%;
+}
+
+.photo-title {
+   text-decoration: none;
+   color: #fff;
+   font-size: 1.6em;
+   text-transform: capitalize;
+}
+
+.post-category-design {
+    background: #5aba59;
+}
+.post-category-pure {
+    background: #4d85d1;
+}
+.post-category-yui {
+    background: #8156a7;
+}
+.post-category-javascript {
+    background: #df2d4f;
+}
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+
+.footer {
+   text-align: center;
+   padding: 1em 0;
+   font-size: 80%;
+   color: #fff;
+   letter-spacing: 1px;
+}
+.footer ul li a {
+   display:inline;
+   padding: 0;
+}
+.hugo{
+   color: #fff;
+   font-weight: bold;
+}
+
+.footer .pure-menu {
+   background: transparent;
+   opacity: 0.5;
+}
+
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+   background: none;
+}
+
+/** Hover Effects */
+.caption {
+   position: relative;
+   overflow: hidden;
+   -webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   transform: translateZ(0);
+}
+.caption__media {
+   display: block;
+   min-width: 100%;
+   max-width: 100%;
+   height: auto;
+   margin-bottom: 0;
+}
+.caption__overlay {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   padding: 10px;
+   color: white;
+   -webkit-transform: translateY(100%);
+   -webkit-transition: transform .35s ease-out;
+   -moz-transform: translateY(100%);
+   -moz-transition: transform .35s ease-out;
+   transform: translateY(100%);
+   transition: transform .35s ease-out;
+}
+.caption:hover .caption__overlay {
+   -webkit-transform: translateY(0);
+   -moz-transform: translateY(0);
+   transform: translateY(0);
+}
+
+.caption__overlay__title {
+   margin: 0;
+   padding: 0 0 12px;
+   -webkit-transform: translateY( calc(-100% - 10px) ); /* +10px overlay padding */
+   -webkit-transition: transform .35s ease-out;
+   -moz-transform: translateY( calc(-100% - 10px) ); /* +10px overlay padding */
+   -moz-transition: transform .35s ease-out;
+    transform: translateY( calc(-100% - 10px) ); /* +10px overlay padding */
+    transition: transform .35s ease-out;
+}
+.caption:hover .caption__overlay__title {
+   -webkit-transform: translateY(0);
+   -moz-transform: translateY(0);
+   transform: translateY(0);
+}
+
+.caption::before {
+   content: ' ';
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: transparent;
+   -webkit-transition: background .35s ease-out;
+   -moz-transition: background .35s ease-out;
+   transition: background .35s ease-out;
+}
+.caption:hover::before {
+    background: rgba(0, 0, 0, .5);
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}

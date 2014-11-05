@@ -1,0 +1,15 @@
++++
+date = "2014-11-05T19:42:53+11:00"
+draft = false
+title = "sisyphus"
+categories = ["Sydney", "Australia", "Sculptures by the Sea"]
++++
+
+<img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
+            calc(33% - 100px)"
+     srcset="/thumb/sisyphus.jpg 1024w,
+             /thumb/sisyphus-large.jpg 800w,
+             /thumb/sisyphus-medium.jpg 640w"
+     src="/thumb/sisyphus-small.jpg"
+     class="caption__media"
+     alt="sisyphus"/>

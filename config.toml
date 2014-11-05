@@ -1,0 +1,16 @@
+baseurl = "http://www.janalonzo.com"
+languageCode = "en-us"
+title = "Jan Alonzo"
+canonifyurls = true
+
+[indexes]
+    category = "categories"
+    tag = "tags"
+
+[params]
+    Description = "Evolve solutions; when you find a good one, don't stop."
+    twitter = "jmalonzo"
+    github = "jmalonzo"
+    gplus = "+JanMichaelAlonzo"
+    linkedin = "jmalonzo"
+    facebook = "jmalonzo"
