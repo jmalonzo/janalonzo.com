@@ -1,22 +1,23 @@
 {{ partial "header.html" . }}
+{{ partial "content-header.html" . }}
 
-<div id="layout" class="pure-g">
-  <!-- overwrite the media query content margin for a single photo page */
-  <div class="content pure-u-1 pure-u-md-4-4" style="margin-left:0">
-    <div>
-      <!-- wrapper for photos -->
-      <section class="photo">
-        <h1 class="content-subhead">
-          {{ .Date.Format "02 Jan 2006, 15:04" }} &middot; <a href="{{ .Permalink }}">{{ .Title }}</a> &middot;
-          {{ if isset .Params "categories" }}
-          {{ range .Params.categories }}<a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize}}.html">#{{ . }}</a>{{ end }}{{ end }}
-        </h1>
-        <div class="post-description">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-18 col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{ .Title }} &middot; {{ .Date.Format "02 Jan 2006, 15:04" }}</div>
+        <div class="panel-body">
           {{ .Content }}
+          {{ if isset .Params "categories" }}
+          {{ range .Params.categories }}
+          <a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>
+          {{ end }}{{ end }}
+
         </div>
-      </section>
-      {{ partial "footer.html" . }}
+      </div>
     </div>
   </div>
 </div>
+
+{{ partial "footer.html" . }}
 {{ partial "end.html" . }}

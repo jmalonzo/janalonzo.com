@@ -17,15 +17,15 @@ module.exports = function(grunt) {
       },
       prod: {
         files: {
-          'build/css/blog.min.css': [
-            'assets/css/blog.css'
+          'build/css/site.min.css': [
+            'assets/css/site.css'
           ]
         }
       },
       dev: {
         files: {
-          'static/css/blog.min.css': [
-            'assets/css/blog.css'
+          'static/css/site.min.css': [
+            'assets/css/site.css'
           ]
         }
       }
@@ -163,7 +163,8 @@ module.exports = function(grunt) {
         "static/thumb",
         "static/css",
         "static/js",
-        "public/"
+        "public/",
+        "build/"
       ],
       prod: [
         "build"
@@ -180,18 +181,18 @@ module.exports = function(grunt) {
         // Deploy everything. Might need to separate image deployment
         // in the future
         command: [
-          's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index --exclude=./public/assets --exclude=./public/thumb/ --exclude=./public/css/ ~/Code/janalonzo.info/public/* s3://com.janalonzo.www/',
-          's3cmd -c ~/.s3cfg-personal -m image/jpeg --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" put ~/Code/janalonzo.info/public/thumb/* s3://com.janalonzo.www/thumb/',
-          's3cmd -c ~/.s3cfg-personal -m image/jpeg --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/assets/bg.jpg s3://com.janalonzo.www/assets/',
-          's3cmd -c ~/.s3cfg-personal -m image/png --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/assets/profile.png s3://com.janalonzo.www/assets/',
-          's3cmd -c ~/.s3cfg-personal -m text/css --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/css/* s3://com.janalonzo.www/css/',
-          's3cmd -c ~/.s3cfg-personal -m text/javascript --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/js/* s3://com.janalonzo.www/js/',
-          's3cmd -c ~/.s3cfg-personal --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/fonts/* s3://com.janalonzo.www/fonts/'
+          's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index ~/Code/janalonzo.info/public/* s3://janalonzo.com/',
+          's3cmd -c ~/.s3cfg-personal -m image/jpeg --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" put ~/Code/janalonzo.info/public/thumb/* s3://janalonzo.com/thumb/',
+          's3cmd -c ~/.s3cfg-personal -m image/jpeg --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/assets/bg.jpg s3://janalonzo.com/assets/',
+          's3cmd -c ~/.s3cfg-personal -m image/png --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/assets/profile.png s3://janalonzo.com/assets/',
+          's3cmd -c ~/.s3cfg-personal -m text/css --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/css/* s3://janalonzo.com/css/',
+          's3cmd -c ~/.s3cfg-personal -m text/javascript --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/js/* s3://janalonzo.com/js/',
+          's3cmd -c ~/.s3cfg-personal --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/fonts/* s3://janalonzo.com/fonts/'
         ].join('&&')
       },
       sync: {
         // Sync non-image, css assets
-        command: 's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index --exclude=./public/assets --exclude=./public/thumb/ --exclude=./public/css/ ~/Code/janalonzo.info/public/* s3://com.janalonzo.www/'
+        command: 's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index --exclude=./public/assets --exclude=./public/thumb/ --exclude=./public/css/ ~/Code/janalonzo.info/public/* s3://janalonzo.com/'
       }
     }
   });
