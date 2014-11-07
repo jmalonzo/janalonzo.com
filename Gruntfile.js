@@ -100,14 +100,17 @@ module.exports = function(grunt) {
         engine: 'im',
         newFilesOnly: true,
         sizes: [{
-          name: 'small',
-          width: 320
-        },{
-          name: 'medium',
+          name: 'xsmall',
           width: 640
         },{
-          name: 'large',
+          name: 'small',
           width: 1024
+        },{
+          name: 'medium',
+          width: 2048
+        },{
+          name: 'large',
+          width: 2560
         }]
       },
       prod: {
@@ -181,7 +184,7 @@ module.exports = function(grunt) {
         // Deploy everything. Might need to separate image deployment
         // in the future
         command: [
-          's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index ~/Code/janalonzo.info/public/* s3://janalonzo.com/',
+          's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index --exclude=./public/thumb/ ~/Code/janalonzo.info/public/* s3://janalonzo.com/',
           's3cmd -c ~/.s3cfg-personal -m image/jpeg --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" put ~/Code/janalonzo.info/public/thumb/* s3://janalonzo.com/thumb/',
           's3cmd -c ~/.s3cfg-personal -m image/jpeg --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/assets/bg.jpg s3://janalonzo.com/assets/',
           's3cmd -c ~/.s3cfg-personal -m image/png --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/assets/profile.png s3://janalonzo.com/assets/',

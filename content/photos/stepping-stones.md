@@ -7,9 +7,11 @@ categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beache
 
 <img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
             calc(33% - 100px)"
-     srcset="/thumb/stepping-stones.jpg 1024w,
-             /thumb/stepping-stones-large.jpg 800w,
-             /thumb/stepping-stones-medium.jpg 640w"
+     srcset="/thumb/stepping-stones.jpg 3200w,
+             /thumb/stepping-stones-large.jpg 2560w,
+             /thumb/stepping-stones-medium.jpg 2048w,
+             /thumb/stepping-stones-small.jpg 1024w,
+             /thumb/stepping-stones-xsmall.jpg 640w"
      src="/thumb/stepping-stones-small.jpg"
      class="caption__media"
      alt="Stepping Stones at Bungan Beach"/>

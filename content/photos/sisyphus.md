@@ -7,9 +7,11 @@ categories = ["Sydney", "Australia", "Sculptures by the Sea"]
 
 <img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
             calc(33% - 100px)"
-     srcset="/thumb/sisyphus.jpg 1024w,
-             /thumb/sisyphus-large.jpg 800w,
-             /thumb/sisyphus-medium.jpg 640w"
+     srcset="/thumb/sisyphus.jpg 3200w,
+             /thumb/sisyphus-large.jpg 2560w,
+             /thumb/sisyphus-medium.jpg 2048w,
+             /thumb/sisyphus-small.jpg 1024w,
+             /thumb/sisyphus-xsmall.jpg 640w"
      src="/thumb/sisyphus-small.jpg"
-     class="caption__media"
+     class="img-responsive caption__media"
      alt="sisyphus"/>

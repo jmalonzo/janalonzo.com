@@ -7,9 +7,11 @@ categories = ["Sydney", "Australia", "Sculptures by the Sea"]
 
 <img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
             calc(33% - 100px)"
-     srcset="/thumb/hold-still.jpg 1024w,
-             /thumb/hold-still-large.jpg 800w,
-             /thumb/hold-still-medium.jpg 640w"
+     srcset="/thumb/hold-still.jpg 3200w,
+             /thumb/hold-still-large.jpg 2560w,
+             /thumb/hold-still-medium.jpg 2048w,
+             /thumb/hold-still-small.jpg 1024w,
+             /thumb/hold-still-xsmall.jpg 640w"
      src="/thumb/hold-still-small.jpg"
-     class="caption__media"
+     class="img-responsive caption__media"
      alt="hold still"/>
