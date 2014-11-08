@@ -7,6 +7,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-imageoptim');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   require('load-grunt-tasks')(grunt);
   
@@ -130,13 +131,25 @@ module.exports = function(grunt) {
         }]
       }
     },
-    compress: {
+    htmlmin: {
       prod: {
         options: {
-          mode: 'gzip',
-          level: 1,
-          pretty: true
+          removeComments: true,
+          collapseWhitespace:  true
         },
+        files: {
+          'build/index.html': 'public/index.html',
+          'build/photos.html': 'public/photos.html'
+        }
+      }
+    },
+    compress: {
+      options: {
+        mode: 'gzip',
+        level: 1,
+        pretty: true
+      },
+      prod: {
         files: [{
           expand: true,
           cwd: 'build/images',
@@ -157,6 +170,19 @@ module.exports = function(grunt) {
           cwd: 'build/js',
           src: ['**/*.js'],
           dest: 'static/js'
+        }, {
+          expand: true,
+          cwd: 'build',
+          src: ['**/*.html'],
+          dest: 'public'
+        }]
+      },
+      prod_html: {
+        files: [{
+          expand: true,
+          cwd: 'build',
+          src: ['**/*.html'],
+          dest: 'public'
         }]
       }
     },
@@ -184,13 +210,15 @@ module.exports = function(grunt) {
         // Deploy everything. Might need to separate image deployment
         // in the future
         command: [
-          's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index --exclude=./public/thumb/ ~/Code/janalonzo.info/public/* s3://janalonzo.com/',
-          's3cmd -c ~/.s3cfg-personal -m image/jpeg --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" put ~/Code/janalonzo.info/public/thumb/* s3://janalonzo.com/thumb/',
-          's3cmd -c ~/.s3cfg-personal -m image/jpeg --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/assets/bg.jpg s3://janalonzo.com/assets/',
-          's3cmd -c ~/.s3cfg-personal -m image/png --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/assets/profile.png s3://janalonzo.com/assets/',
-          's3cmd -c ~/.s3cfg-personal -m text/css --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/css/* s3://janalonzo.com/css/',
-          's3cmd -c ~/.s3cfg-personal -m text/javascript --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/js/* s3://janalonzo.com/js/',
-          's3cmd -c ~/.s3cfg-personal --add-header="Cache-Control: max-age=31536000" --cf-invalidate put ~/Code/janalonzo.info/public/fonts/* s3://janalonzo.com/fonts/'
+          's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index --exclude=./public/index.html --exclude=./public/photos.html --exclude=./public/thumb/ ~/Code/janalonzo.info/public/* s3://janalonzo.com/',
+          's3cmd -c ~/.s3cfg-personal -m text/html --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=86400" put ~/Code/janalonzo.info/public/index.html s3://janalonzo.com/',
+          's3cmd -c ~/.s3cfg-personal -m text/html --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=86400" put ~/Code/janalonzo.info/public/photos.html s3://janalonzo.com/',
+          's3cmd -c ~/.s3cfg-personal -m image/jpeg --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" sync --delete-removed ~/Code/janalonzo.info/public/thumb/* s3://janalonzo.com/thumb/',
+          's3cmd -c ~/.s3cfg-personal -m image/jpeg --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate sync --delete-removed ~/Code/janalonzo.info/public/assets/bg.jpg s3://janalonzo.com/assets/',
+          's3cmd -c ~/.s3cfg-personal -m image/png --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate sync --delete-removed ~/Code/janalonzo.info/public/assets/profile.png s3://janalonzo.com/assets/',
+          's3cmd -c ~/.s3cfg-personal -m text/css --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate sync --delete-removed ~/Code/janalonzo.info/public/css/* s3://janalonzo.com/css/',
+          's3cmd -c ~/.s3cfg-personal -m text/javascript --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate sync --delete-removed ~/Code/janalonzo.info/public/js/* s3://janalonzo.com/js/',
+          's3cmd -c ~/.s3cfg-personal --add-header="Cache-Control: max-age=31536000" --cf-invalidate sync --delete-removed ~/Code/janalonzo.info/public/fonts/* s3://janalonzo.com/fonts/'
         ].join('&&')
       },
       sync: {
@@ -220,6 +248,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', [
     'shell:build',
-    'shell:deploy',
+    'htmlmin:prod',
+    'compress:prod_html',
+    'shell:deploy'
   ]);
 };
