@@ -3,6 +3,8 @@ date = "2014-10-05T06:06:06+10:00"
 draft = false
 title = "sydney harbour"
 categories = ["Sydney", "Australia", "Cityscapes"]
+description = "The iconic Sydney Harbour Bridge"
+thumbnail = "http://janalonzo.com/thumb/sydney-harbour-small.jpg"
 +++
 
 <img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,

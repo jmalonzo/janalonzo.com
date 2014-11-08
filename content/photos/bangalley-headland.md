@@ -3,6 +3,8 @@ date = "2014-06-30T06:06:06+10:00"
 draft = false
 title = "bangalley headland"
 categories = ["Sydney", "Australia", "Northern Beaches", "Landscapes", "Seascapes"]
+description = "Bangalley Headland"
+thumbnail = "http://janalonzo.com/thumb/bangalley-headland-small.jpg"
 +++
 
 <img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,

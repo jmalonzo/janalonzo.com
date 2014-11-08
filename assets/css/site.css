@@ -20,7 +20,6 @@ a:hover {
   border: 1px solid #fff;
 }
 
-
 /*
  * Base structure
  */
@@ -34,14 +33,12 @@ body {
    background-position: center center;
    background-attachment: fixed;
    background-image: url("/assets/bg.jpg");
-   background-color: #fff;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
-   /* jan addition */
-
 }
+
 body {
   color: #fff;
   text-align: center;

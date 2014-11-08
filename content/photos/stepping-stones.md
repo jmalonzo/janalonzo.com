@@ -3,6 +3,8 @@ date = "2014-10-12T17:51:20+11:00"
 draft = false
 title = "stepping stones"
 categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beaches"]
+description = "Stepping Stones at Bungan Beach"
+thumbnail = "http://janalonzo.com/thumb/stepping-stones-small.jpg"
 +++
 
 <img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,

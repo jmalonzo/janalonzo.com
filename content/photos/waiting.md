@@ -3,6 +3,8 @@ date = "2014-10-01T06:06:06+10:00"
 draft = false
 title = "waiting"
 categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Central Coast"]
+description = "Waiting for sunrise at Terrigal Haven"
+thumbnail = "http://janalonzo.com/thumb/waiting-small.jpg"
 +++
 
 <img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
