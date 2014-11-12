@@ -15,5 +15,6 @@ thumbnail = "http://janalonzo.com/thumb/paddy-oysters-small.jpg"
              /thumb/paddy-oysters-small.jpg 1024w,
              /thumb/paddy-oysters-xsmall.jpg 640w"
      src="/thumb/paddy-oysters-small.jpg"
-     class="caption__media"
-     alt="Paddy Oysters"/>
+     class="img-responsive caption__media"
+     alt="Paddy Oysters"
+     itemprop="image"/>

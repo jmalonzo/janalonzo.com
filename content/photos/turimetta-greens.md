@@ -15,5 +15,6 @@ thumbnail = "http://janalonzo.com/thumb/turimetta-greens-small.jpg"
              /thumb/turimetta-greens-small.jpg 1024w,
              /thumb/turimetta-greens-xsmall.jpg 640w"
      src="/thumb/turimetta-greens-small.jpg"
-     class="caption__media"
-     alt="Moss at North Turimetta Beach"/>
+     class="img-responsive caption__media"
+     alt="Moss at North Turimetta Beach"
+     itemprop="image"/>

@@ -15,6 +15,7 @@ thumbnail = "http://janalonzo.com/thumb/sydney-harbour-small.jpg"
              /thumb/sydney-harbour-small.jpg 1024w,
              /thumb/sydney-harbour-xsmall.jpg 640w"
      src="/thumb/sydney-harbour-small.jpg"
-     class="caption__media"
-     alt="Sydney Harbour Bridge"/>
+     class="img-responsive caption__media"
+     alt="Sydney Harbour Bridge"
+     itemprop="image"/>
 

@@ -1,18 +1,23 @@
 {{ partial "header.html" . }}
-{{ partial "content-header.html" . }}
+{{ partial "header-single.html" . }}
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-18 col-md-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">{{ .Title }} &middot; {{ .Date.Format "02 Jan 2006, 15:04" }}</div>
-        <div class="panel-body">
-          {{ .Content }}
-          {{ if isset .Params "categories" }}
-          {{ range .Params.categories }}
-          <a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>
-          {{ end }}{{ end }}
+      <div itemscope itemtype="http://schema.org/Photograph">
+        {{ .Content }}
+      </div>
 
+      <!-- Modal -->
+      <div class="modal fade" id="exif-modal" tabindex="-1" role="dialog" aria-labelledby="modal-shoot-details" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="modal-shoot-details">{{ .Title }}</h4>
+            </div>
+            <div class="modal-body exif-data-table"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -20,4 +25,4 @@
 </div>
 
 {{ partial "footer.html" . }}
-{{ partial "end.html" . }}
+{{ partial "end-photos-single.html" . }}

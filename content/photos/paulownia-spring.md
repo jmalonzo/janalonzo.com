@@ -16,4 +16,5 @@ thumbnail = "http://janalonzo.com/thumb/paulownia-spring-small.jpg"
              /thumb/paulownia-spring-xsmall.jpg 640w"
      src="/thumb/paulownia-spring-small.jpg"
      class="img-responsive caption__media"
-     alt="Paulownia Spring"/>
+     alt="Paulownia Spring"
+     itemprop="image"/>

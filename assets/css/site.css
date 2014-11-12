@@ -27,16 +27,7 @@ a:hover {
 html,
 body {
    height: 100%;
-   background-color: #333;
-   /* jan addition */
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-attachment: fixed;
-   background-image: url("/assets/bg.jpg");
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+   background-color: #222;
 }
 
 body {
@@ -139,21 +130,21 @@ body {
 
 /** Jan's additions, custom content */
 .profile-photo {
-   background-image: url("/assets/profile.png");
    width: 128px;
    height: 128px;
    border-radius: 69px;
-   border: 5px solid rgba(238, 238, 238, 0.8);;
+   border: 2px solid rgba(238, 238, 238, 0.8);
    margin-left: auto;
    margin-right: auto;
-   background-repeat: no-repeat;
    overflow: hidden;
 }
 
-.btn-social {
+.btn-social,
+.btn-social:hover {
    background: transparent;
    border: 0;
    color: #fff;
+   box-shadow: none;
 }
 
 .photo-title {
@@ -169,28 +160,39 @@ body {
 }
 
 .navbar {
-   opacity: 0.8;
+   opacity: 0.7;
 }
 
 .post-category {
    margin: 0 0.1em;
    padding: 0.3em 0.3em;
-   color: #fff;
-   background: transparent;
-   font-size: 80%;
+   color: #ccc;
 }
 
-.panel .post-category {
-   color: #000;
-}
-
-.panel .panel-heading {
+.navbar-text {
    text-transform: capitalize;
 }
 
 .footer p {
-   opacity: 0.6;
+   opacity: 0.8;
    font-size: 0.8em;
+}
+
+.panel, .modal {
+   text-align: left;
+   color: #000;
+   text-shadow: none;
+}
+
+.btn-single-image,
+.btn-single-image:hover,
+.btn-single-image:active
+{
+   background: none;
+   border: 0;
+   box-shadow: none;
+   border-color: transparent;
+   background-repeat: none;
 }
 
 /** Hover Effects */
@@ -200,6 +202,7 @@ body {
    -webkit-transform: translateZ(0);
    -moz-transform: translateZ(0);
    transform: translateZ(0);
+   text-align: left;
 }
 .caption__media {
    display: block;
@@ -293,5 +296,8 @@ body {
   .mastfoot,
   .cover-container {
     width: 700px;
+  }
+  .img-responsive {
+     min-height: 460px;
   }
 }

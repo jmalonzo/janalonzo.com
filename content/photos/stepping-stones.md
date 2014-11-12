@@ -15,5 +15,6 @@ thumbnail = "http://janalonzo.com/thumb/stepping-stones-small.jpg"
              /thumb/stepping-stones-small.jpg 1024w,
              /thumb/stepping-stones-xsmall.jpg 640w"
      src="/thumb/stepping-stones-small.jpg"
-     class="caption__media"
-     alt="Stepping Stones at Bungan Beach"/>
+     class="img-responsive caption__media"
+     alt="Stepping Stones at Bungan Beach"
+     itemprop="image"/>

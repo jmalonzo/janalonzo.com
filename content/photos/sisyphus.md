@@ -16,4 +16,5 @@ thumbnail = "http://janalonzo.com/thumb/sisyphus-small.jpg"
              /thumb/sisyphus-xsmall.jpg 640w"
      src="/thumb/sisyphus-small.jpg"
      class="img-responsive caption__media"
-     alt="sisyphus"/>
+     alt="sisyphus"
+     itemprop="image"/>

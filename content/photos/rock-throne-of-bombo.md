@@ -15,5 +15,6 @@ thumbnail = "http://janalonzo.com/thumb/rock-throne-of-bombo-small.jpg"
              /thumb/rock-throne-of-bombo-small.jpg 1024w,
              /thumb/rock-throne-of-bombo-xsmall.jpg 640w"
      src="/thumb/rock-throne-of-bombo-small.jpg"
-     class="caption__media"
-     alt="Bombo Quarry"/>
+     class="img-responsive caption__media"
+     alt="Bombo Quarry"
+     itemprop="image"/>

@@ -16,4 +16,5 @@ thumbnail = "http://janalonzo.com/thumb/hold-still-small.jpg"
              /thumb/hold-still-xsmall.jpg 640w"
      src="/thumb/hold-still-small.jpg"
      class="img-responsive caption__media"
-     alt="hold still"/>
+     alt="hold still"
+     itemprop="image"/>

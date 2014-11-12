@@ -15,6 +15,7 @@ thumbnail = "http://janalonzo.com/thumb/bangalley-headland-small.jpg"
              /thumb/bangalley-headland-small.jpg 1024w,
              /thumb/bangalley-headland-xsmall.jpg 640w"
      src="/thumb/bangalley-headland-small.jpg"
-     class="caption__media"
-     alt="Bangalley Headland"/>
+     class="img-responsive caption__media"
+     alt="Bangalley Headland"
+     itemprop="image"/>
 

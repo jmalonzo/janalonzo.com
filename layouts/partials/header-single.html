@@ -22,10 +22,14 @@
       {{ if .Title }}
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <p class="navbar-text">
-            <span itemprop="name"><strong>{{ .Title }}</strong></name>
+          <p class="navbar-text" itemscope itemtype="http://schema.org/Photograph">
+            <span itemprop="headline"><strong>{{ .Title }}</strong></name>
+            &nbsp;
+            <span class="btn-exif-info" data-toggle="modal" data-target="#exif-modal">
+              <i class="fa fa-info-circle"></i>
+            </span>
             {{ if isset .Params "categories" }}
-            &middot;
+            &nbsp;
             {{ range .Params.categories }}
             <a class="label label-primary post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>
             {{ end }}{{ end }}

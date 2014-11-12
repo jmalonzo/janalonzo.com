@@ -15,6 +15,6 @@ thumbnail = "http://janalonzo.com/thumb/waiting-small.jpg"
              /thumb/waiting-small.jpg 1024w,
              /thumb/waiting-xsmall.jpg 640w"
      src="/thumb/waiting.jpg"
-     class="caption__media"
-     alt="Terrigal Haven"/>
-
+     class="img-responsive caption__media"
+     alt="Terrigal Haven"
+     itemprop="image"/>

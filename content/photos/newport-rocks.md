@@ -15,5 +15,6 @@ thumbnail = "http://janalonzo.com/thumb/newport-rocks-small.jpg"
              /thumb/newport-rocks-small.jpg 1024w,
              /thumb/newport-rocks-xsmall.jpg 640w"
      src="/thumb/newport-rocks-small.jpg"
-     class="caption__media"
-     alt="Rocks at Newport Beach"/>
+     class="img-responsive caption__media"
+     alt="Rocks at Newport Beach"
+     itemprop="image"/>

@@ -1,22 +1,23 @@
-{{ partial "header.html" . }}
+{{ partial "header-cover.html" . }}
 
 <div class="site-wrapper">
   <div class="site-wrapper-inner">
     <div class="cover-container">
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand">Jan Alonzo</h3>
+          <h3 class="masthead-brand">{{ .Title }}</h3>
           <ul class="nav masthead-nav">
             <li class="active"><a href="#">Home</a></li>
             <!--<li><a href="#">Blog</a></li>-->
             <li><a href="/photos.html">Photography</a></li>
+            <li><a href="http://www.janalonzo.info">About</a></li>
             <li><a href="mailto:jmalonzo@gmail.com">Contact</a></li>
           </ul>
         </div>
       </div>
 
       <div class="inner cover">
-        <div class="profile-photo"></div>
+        <img src="/assets/profile.png" class="img-circle profile-photo"/>
         <h1 class="cover-heading">Evolve solutions; when you find a good one, don't stop.</h1>
         <p class="lead">
           {{ with .Site.Params.Description}}{{.}}  {{ else }}A theme based on the pure css blog layout.{{end}}
@@ -42,11 +43,11 @@
 
       <div class="mastfoot">
         <div class="inner">
-            <p>&copy; 2014 Jan Alonzo. All rights reserved.</p>
+          {{ partial "footer.html" . }}
         </div>
       </div>
     </div>
   </div>
 </div>
 
-{{ partial "end.html" . }}
+{{ partial "end-cover.html" . }}

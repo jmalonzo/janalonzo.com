@@ -15,6 +15,7 @@ thumbnail = "http://janalonzo.com/thumb/blast-furnace-ruins-small.jpg"
              /thumb/blast-furnace-ruins-small.jpg 1024w,
              /thumb/blast-furnace-ruins-xsmall.jpg 640w"
      src="/thumb/blast-furnace-ruins-small.jpg"
-     class="caption__media"
-     alt="Blast Furnace Ruins"/>
+     class="img-responsive caption__media"
+     alt="Blast Furnace Ruins"
+     itemprop="image"/>
 
