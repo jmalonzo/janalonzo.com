@@ -1,5 +1,3 @@
-<div id="overlay"></div>
-
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,12 +26,14 @@
             <span class="btn-exif-info" data-toggle="modal" data-target="#exif-modal">
               <i class="fa fa-info-circle"></i>
             </span>
-            {{ if isset .Params "categories" }}
-            &nbsp;
-            {{ range .Params.categories }}
-            <a class="label label-primary post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>
-            {{ end }}{{ end }}
           </p>
+          {{ if isset .Params "categories" }}
+          <p class="navbar-text">
+          {{ range .Params.categories }}
+              <a class="navbar-link label label-primary post-category post-category-{{ . }}" href="/categories/{{ . | urlize}}.html">#{{ . }}</a>
+          {{ end }}
+          </p>
+          {{ end }}
         </li>
       </ul>
       {{ end }}

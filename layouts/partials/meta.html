@@ -25,22 +25,22 @@
 
 
 {{if .Keywords }}
-{{ range .Keywords }}<meta property="article:tag" content="{{ . }}">
-{{ end }}
+{{ range .Keywords }}<meta property="article:tag" content="{{ . }}">{{ end }}
 {{else if isset .Params "categories" }}
-{{ range .Params.categories }}<meta property="article:tag" content="{{ . }}">
-{{ end }}
+{{ range .Params.categories }}<meta property="article:tag" content="{{ . }}">{{ end }}
 {{end}}
 
 <!--Twitter Cards-->
+{{ if isset .Params "thumbnail" }}
 <meta name="twitter:card" content="photo">
-<!--<meta name="twitter:card" content="summary_large_image">-->
+<meta name="twitter:image" content="{{ .Params.thumbnail }}">
+{{ else }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://janalonzo.com/assets/profile.png">
+{{ end }}
 <meta name="twitter:site" content="@jmalonzo">
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ .Description }}">
-{{ if isset .Params "thumbnail" }}
-<meta name="twitter:image" content="{{ .Params.thumbnail }}">
-{{ end }}
 <meta name="twitter:url" content="{{ .Permalink }}">
 <meta name="twitter:creator" content="@jmalonzo">
 <meta name="twitter:domain" content="janalonzo.com">
