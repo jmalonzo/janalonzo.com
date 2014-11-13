@@ -7,14 +7,4 @@ description = "Waiting for sunrise at Terrigal Haven"
 thumbnail = "http://janalonzo.com/thumb/waiting-small.jpg"
 +++
 
-<img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
-            calc(33% - 100px)"
-     srcset="/thumb/waiting.jpg 3200w,
-             /thumb/waiting-large.jpg 2560w,
-             /thumb/waiting-medium.jpg 2048w,
-             /thumb/waiting-small.jpg 1024w,
-             /thumb/waiting-xsmall.jpg 640w"
-     src="/thumb/waiting.jpg"
-     class="img-responsive caption__media"
-     alt="Terrigal Haven"
-     itemprop="image"/>
+{{% img srcname="/thumb/waiting" title="Seascape swirls at Terrigal Haven, NSW" %}}

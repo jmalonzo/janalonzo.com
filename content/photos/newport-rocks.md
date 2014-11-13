@@ -7,14 +7,6 @@ description = "Sunrise at Newport Beach"
 thumbnail = "http://janalonzo.com/thumb/newport-rocks-small.jpg"
 +++
 
-<img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
-            calc(33% - 100px)"
-     srcset="/thumb/newport-rocks.jpg 3200w,
-             /thumb/newport-rocks-large.jpg 2560w,
-             /thumb/newport-rocks-medium.jpg 2048w,
-             /thumb/newport-rocks-small.jpg 1024w,
-             /thumb/newport-rocks-xsmall.jpg 640w"
-     src="/thumb/newport-rocks-small.jpg"
-     class="img-responsive caption__media"
-     alt="Rocks at Newport Beach"
-     itemprop="image"/>
+{{% img srcname="/thumb/newport-rocks" title="Rocks at Newport Beach" %}}
+
+

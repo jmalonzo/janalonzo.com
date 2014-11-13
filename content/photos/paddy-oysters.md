@@ -7,14 +7,4 @@ description = "Paddy Oyster farm at Woy Woy, Central Coast"
 thumbnail = "http://janalonzo.com/thumb/paddy-oysters-small.jpg"
 +++
 
-<img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
-            calc(33% - 100px)"
-     srcset="/thumb/paddy-oysters.jpg 3200w,
-             /thumb/paddy-oysters-large.jpg 2560w,
-             /thumb/paddy-oysters-medium.jpg 2048w,
-             /thumb/paddy-oysters-small.jpg 1024w,
-             /thumb/paddy-oysters-xsmall.jpg 640w"
-     src="/thumb/paddy-oysters-small.jpg"
-     class="img-responsive caption__media"
-     alt="Paddy Oysters"
-     itemprop="image"/>
+{{% img srcname="/thumb/paddy-oysters" title="Paddy Oysters shed at Woy Woy, NSW" %}}

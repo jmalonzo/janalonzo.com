@@ -1,0 +1,6 @@
+<!-- image -->
+<img class="img-responsive caption__media" itemprop="image"
+     sizes="(max-width: 30em) 100%, (max-width: 50em) 50%, calc(33% - 100px)" itemprop="image"
+     {{ with .Get "srcname" }} srcset="{{.}}.jpg 2560w, {{.}}-large.jpg 2048w, {{.}}-medium.jpg 1024w, {{.}}-small.jpg 640w, {{.}}-xsmall.jpg 320w" src="{{.}}-small.jpg"
+     {{ end }} {{with .Get "title"}}alt="{{.}}"{{end}}/>
+

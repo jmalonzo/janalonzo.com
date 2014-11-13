@@ -7,15 +7,4 @@ description = "Ruins of the century-old Lithgow Blast Furnace"
 thumbnail = "http://janalonzo.com/thumb/blast-furnace-ruins-small.jpg"
 +++
 
-<img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
-            calc(33% - 100px)"
-     srcset="/thumb/blast-furnace-ruins.jpg 3200w,
-             /thumb/blast-furnace-ruins-large.jpg 2560w,
-             /thumb/blast-furnace-ruins-medium.jpg 2048w,
-             /thumb/blast-furnace-ruins-small.jpg 1024w,
-             /thumb/blast-furnace-ruins-xsmall.jpg 640w"
-     src="/thumb/blast-furnace-ruins-small.jpg"
-     class="img-responsive caption__media"
-     alt="Blast Furnace Ruins"
-     itemprop="image"/>
-
+{{% img srcname="/thumb/blast-furnace-ruins" title="Ruins of the blast furnace at Lithgow" %}}

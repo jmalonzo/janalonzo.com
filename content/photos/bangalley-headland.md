@@ -7,15 +7,4 @@ description = "Bangalley Headland"
 thumbnail = "http://janalonzo.com/thumb/bangalley-headland-small.jpg"
 +++
 
-<img sizes="(max-width: 30em) 100%, (max-width: 50em) 50%,
-            calc(33% - 100px)"
-     srcset="/thumb/bangalley-headland.jpg 3200w,
-             /thumb/bangalley-headland-large.jpg 2560w,
-             /thumb/bangalley-headland-medium.jpg 2048w,
-             /thumb/bangalley-headland-small.jpg 1024w,
-             /thumb/bangalley-headland-xsmall.jpg 640w"
-     src="/thumb/bangalley-headland-small.jpg"
-     class="img-responsive caption__media"
-     alt="Bangalley Headland"
-     itemprop="image"/>
-
+{{% img srcname="/thumb/bangalley-headland" title="Rock formations at Bangalley Headland" %}}
