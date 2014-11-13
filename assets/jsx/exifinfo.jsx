@@ -41,8 +41,9 @@
             var make = EXIF.getTag(img, "Make");
             val = "Camera: " + (make ? make + " " : "") + EXIF.getTag(img, "Model");
           } else if (attr == "fnumber") {
-            var aperture = EXIF.getTag(img, "FNumber");
-            val = aperture ? "Aperture: \u0192/" + aperture.numerator : "Aperture: \u0192/---";
+             var aperture = EXIF.getTag(img, "FNumber"),
+                 fstop = String.fromCharCode(402);
+            val = aperture ? "Aperture: " + fstop + "/" + aperture.numerator : "Aperture: " + fstop + "/---";
           } else if (attr == "iso") {
             val = "ISO: " + EXIF.getTag(img, "ISOSpeedRatings");
           } else if (attr == "exposure") {
