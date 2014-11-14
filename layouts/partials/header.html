@@ -1,16 +1,21 @@
 <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-<head>
+{{ if isset .Params "thumbnail" }}
+<head itemscope itemtype="http://schema.org/Photography">
+{{ else }}
+<head itemscope itemtype="http://schema.org/Person">
+{{ end }}
   <meta charset="utf-8">
 
   {{ partial "meta.html" . }}
 
-  <title itemprop="name">{{ .Site.Title }}</title>
+  <title>{{ .Site.Title }}</title>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <link rel="dns-prefetch" href="//www.janalonzo.com"/>
   <link rel="icon" type="image/ico" href="http://www.janalonzo.com/assets/favicon.ico"/>
   <link rel="canonical" href="{{ .Permalink }}">
   {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
@@ -23,5 +28,9 @@
     ga('create', 'UA-594998-17', 'auto');
     ga('send', 'pageview');
   </script>
+  <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/css/bootstrap-theme.min.css"/>
+  <link rel="stylesheet" href="/css/site.min.css"/>
 </head>
 <body>

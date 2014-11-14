@@ -10,14 +10,14 @@
         {{ .Content }}
         <div class="caption__overlay">
           <h2 class="caption__overlay__title">
-            <a itemprop="headline" class="photo-title" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <a class="photo-title" href="{{ .Permalink }}">{{ .Title }}</a></h2>
           <p class="caption__overlay__content">
-            <span class="photo-date" itemprop="datePublished">
+            <span class="photo-date">
               {{ .Date.Format "02 Jan 2006, 15:04" }} &middot;
             </span>
             {{ if isset .Params "categories" }}
             {{ range .Params.categories }}
-            <a itemprop="genre" class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>
+            <a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>
             {{ end }}{{ end }}
           </p>
         </div>

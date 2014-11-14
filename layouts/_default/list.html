@@ -4,18 +4,18 @@
 <div class="container-fluid">
   <div class="row">
     {{ range .Data.Pages }}
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" itemscope itemtype="http://schema.org/Photograph">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
       <div class="caption">
         {{ .Content }}
         <div class="caption__overlay">
-          <h2 class="caption__overlay__title"><a itemprop="headline" class="photo-title" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <h2 class="caption__overlay__title"><a class="photo-title" href="{{ .Permalink }}">{{ .Title }}</a></h2>
           <p class="caption__overlay__content">
-            <span class="photo-date" itemprop="datePublished">
+            <span class="photo-date">
               {{ .Date.Format "02 Jan 2006, 15:04" }} &middot;
             </span>
             {{ if isset .Params "categories" }}
             {{ range .Params.categories }}
-            <a itemprop="genre" class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>
+            <a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">#{{ . }}</a>
             {{ end }}{{ end }}
           </p>
         </div>
