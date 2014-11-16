@@ -247,7 +247,9 @@ module.exports = function(grunt) {
         distributionId: 'E26EUWWL0LUUIU',
         invalidations: [
           '/index.html',
-          '/photos.html'
+          '/photos.html',
+          '/css/site.min.css',
+          '/js/exifdata.min.js'
         ]
       }
     },
