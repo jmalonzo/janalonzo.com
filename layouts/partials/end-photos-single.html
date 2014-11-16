@@ -17,6 +17,7 @@
   if (raf) raf(cb);
   else window.addEventListener('load', cb);
 
+  document.querySelector(".image-view-single img").classList.remove("caption__media");
 </script>
 <script src="/js/picturefill.min.js" defer async></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

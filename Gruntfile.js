@@ -4,13 +4,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-responsive-images');
-  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-react');
+  grunt.loadNpmTasks('grunt-aws');
+  grunt.loadNpmTasks('grunt-critical');
 
   require('load-grunt-tasks')(grunt);
   
@@ -19,14 +20,7 @@ module.exports = function(grunt) {
       options: {
         report: 'min'
       },
-      prod: {
-        files: {
-          'build/css/site.min.css': [
-            'assets/css/site.css'
-          ]
-        }
-      },
-      dev: {
+      default: {
         files: {
           'static/css/site.min.css': [
             'assets/css/site.css'
@@ -40,7 +34,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'assets/jsx',
           src: ['**/*.jsx'],
-          dest: 'build/js/tmp',
+          dest: 'tmp',
           ext: '.js'
         }]
       }
@@ -54,7 +48,7 @@ module.exports = function(grunt) {
           'build/js/exifdata.min.js': [
             'assets/js/exif.js',
             'assets/js/react-0.12.0.js',
-            'build/js/exifinfo.js'
+            'tmp/exifinfo.js'
           ]
         }
       },
@@ -63,7 +57,7 @@ module.exports = function(grunt) {
           'static/js/exifdata.min.js': [
             'assets/js/exif.js',
             'assets/js/react-0.12.0.js',
-            'build/js/tmp/exifinfo.js'
+            'tmp/exifinfo.js'
           ]
         }
       }
@@ -73,20 +67,20 @@ module.exports = function(grunt) {
         encoding: 'utf-8',
         timestamp: true
       },
-      prod: {
+      images: {
         files: [{
           expand: true,
-          cwd: 'assets/css/vendor',
-          src: ['**/*.css'],
-          dest: 'build/css'
+          cwd: 'assets/photos',
+          src: ['**/*.{jpg,png}'],
+          dest: 'static/thumb'
         }, {
           expand: true,
-          cwd: 'assets/js/vendor',
-          src: ['**/*.js'],
-          dest: 'build/js'
+          cwd: 'assets/images',
+          src: ['**/*.{jpg,png,ico}'],
+          dest: 'static/assets'
         }]
       },
-      dev: {
+      assets: {
         files: [{
           expand: true,
           cwd: 'assets/css/vendor',
@@ -98,6 +92,22 @@ module.exports = function(grunt) {
           src: ['**/*.js'],
           dest: 'static/js'
         }]
+      },
+      prod: {
+        files: [{
+          expand: true,
+          cwd: 'build/js',
+          src: ['**/*.js'],
+          dest: 'static/js'
+        }]
+      },
+      prod_html: {
+        files: [{
+          expand: true,
+          cwd: 'build',
+          src: ['**/*.html'],
+          dest: 'public'
+        }]
       }
     },
     imagemin: {
@@ -105,21 +115,8 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'assets/photos',
-          src: ['**/*.{png,jpg,gif,ico}'],
+          src: ['**/*.{png,jpg}'],
           dest: 'build/images'
-        }]
-      },
-      dev: {
-        files: [{
-          expand: true,
-          cwd: 'assets/photos',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'static/thumb'
-        }, {
-          expand: true,
-          cwd: 'assets/images',
-          src: ['**/*.{jpg,png}'],
-          dest: 'static/assets'
         }]
       }
     },
@@ -155,8 +152,8 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: ['**/*.{png,jpg,gif}'],
-          cwd: 'assets/photos',
-          dest: 'build/images'
+          cwd: 'build/images',
+          dest: 'static/thumb'
         }]
       },
       dev: {
@@ -182,61 +179,77 @@ module.exports = function(grunt) {
         }]
       }
     },
-    compress: {
-      options: {
-        mode: 'gzip',
-        level: 1,
-        pretty: true
-      },
-      prod: {
-        files: [{
-          expand: true,
-          cwd: 'build/images',
-          src: ['**/*.{jpg,png}'],
-          dest: 'static/thumb'
-        }, {
-          expand: true,
-          cwd: 'assets/images',
-          src: ['**/*.{jpg,png}'],
-          dest: 'static/assets'
-        }, {
-          expand: true,
-          cwd: 'build/css',
-          src: ['**/*.css'],
-          dest: 'static/css'
-        }, {
-          expand: true,
-          cwd: 'build/js',
-          src: ['**/*.js'],
-          dest: 'static/js'
-        }, {
-          expand: true,
-          cwd: 'build',
-          src: ['**/*.html'],
-          dest: 'public'
-        }]
-      },
-      prod_html: {
-        files: [{
-          expand: true,
-          cwd: 'build',
-          src: ['**/*.html'],
-          dest: 'public'
-        }]
-      }
-    },
     clean: {
       build: [
-        "static/assets",
-        "static/thumb",
         "static/css",
         "static/js",
         "build/"
       ],
       prod: [
         "build",
-        "public"
+        "public",
+        "tmp"
       ],
+    },
+    aws: grunt.file.readJSON("credentials.json"),
+    s3: {
+      options: {
+        accessKeyId: "<%= aws.accessKeyId %>",
+        secretAccessKey: "<%= aws.secretAccessKey %>",
+        bucket: "janalonzo.com",
+        region: "ap-southeast-2",
+        gzip: true,
+        dryRun: false,
+        headers: {
+          CacheControl: 31536000,
+        },
+        charset: "utf-8"
+      },
+      assets: {
+        cwd: "public/assets",
+        src: "**/*.{jpg,png,ico}",
+        dest: "assets/"
+      },
+      css: {
+        cwd: "public/css",
+        src: "**/*.css",
+        dest: "css/"
+      },
+      js: {
+        cwd: "public/js",
+        src: "**/*.js",
+        dest: "js/"
+      },
+      fonts: {
+        cwd: "public/fonts",
+        src: "**",
+        dest: "fonts/"
+      },
+      images: {
+        cwd: "public/thumb",
+        src: "**",
+        dest: "thumb/"
+      },
+      markup: {
+        options: {
+          headers: {
+            CacheControl: 86400
+          }
+        },
+        cwd: "public",
+        src: "**/*.{html,xml}"
+      }
+    },
+    cloudfront: {
+      options: {
+        accessKeyId: "<%= aws.accessKeyId %>",
+        secretAccessKey: "<%= aws.secretAccessKey %>",
+        distributionId: 'E26EUWWL0LUUIU',
+        invalidations: [
+          '/index.html',
+          '/photos.html'
+        ]
+      }
     },
     shell: {
       options: {
@@ -244,58 +257,69 @@ module.exports = function(grunt) {
       },
       build: {
         command: 'hugo --uglyUrls=true'
-      },
-      deploy: {
-        // Deploy everything. Might need to separate image deployment
-        // in the future
-        command: [
-          's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index --exclude=./public/thumb/ --exclude="**/*.html" ./public/* s3://janalonzo.com/',
-          's3cmd -c ~/.s3cfg-personal -m text/html --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=86400" sync --no-preserve --include="**/*.html" ./public/**/*.html s3://janalonzo.com/',
-          's3cmd -c ~/.s3cfg-personal -m text/html --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=86400" sync --no-preserve ./public/photos/*.html s3://janalonzo.com/photos/',
-          's3cmd -c ~/.s3cfg-personal -m text/html --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=86400" sync --no-preserve ./public/categories/*.html s3://janalonzo.com/categories/',
-          's3cmd -c ~/.s3cfg-personal -m text/html --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=86400" sync --no-preserve ./public/categories/*.xml s3://janalonzo.com/categories/',
-          's3cmd -c ~/.s3cfg-personal -m image/jpeg --cf-invalidate --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" put --no-preserve ./public/thumb/* s3://janalonzo.com/thumb/',
-          's3cmd -c ~/.s3cfg-personal -m image/jpeg --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put --no-preserve ./public/assets/bg.jpg s3://janalonzo.com/assets/',
-          's3cmd -c ~/.s3cfg-personal -m image/png --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put --no-preserve ./public/assets/profile.png s3://janalonzo.com/assets/',
-          's3cmd -c ~/.s3cfg-personal -m text/css --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put --no-preserve ./public/css/* s3://janalonzo.com/css/',
-          's3cmd -c ~/.s3cfg-personal -m text/javascript --add-header="Content-Encoding: gzip" --add-header="Cache-Control: max-age=31536000" --cf-invalidate put --no-preserve ./public/js/* s3://janalonzo.com/js/',
-          's3cmd -c ~/.s3cfg-personal --add-header="Cache-Control: max-age=31536000" --cf-invalidate sync --delete-removed ./public/fonts/* s3://janalonzo.com/fonts/'
-        ].join('&&')
-      },
-      sync: {
-        // Sync non-image, css assets
-        command: 's3cmd -c ~/.s3cfg-personal sync --delete-removed --cf-invalidate-default-index --exclude=./public/index.html --exclude=./public/photos.html --exclude=./public/thumb/ ./public/* s3://janalonzo.com/'
+      }
+    },
+    critical: {
+      test: {
+        options: {
+          base: "./",
+          css: [
+            'assets/css/site.css',
+            'assets/css/bootstrap.css',
+            'assets/css/bootstrap-theme.css'
+          ],
+          width: 320,
+          height: 480
+        },
+        src: './public/photos/newport-rocks.html',
+        dest: './build/css/critical.css'
       }
     }
   });
 
-  grunt.registerTask('default', [
-    'clean:build',
-    'clean:prod',
-    'newer:cssmin:prod',
-    'newer:react:default',
-    'newer:uglify:prod',
-    'newer:copy:prod',
-    'newer:imagemin:prod',
-    'newer:imageoptim:prod',
-    'responsive_images:prod',
-    'newer:compress:prod'
-  ]);
-
   grunt.registerTask('dev', [
     'clean:build',
-    'newer:cssmin:dev',
+    'newer:cssmin',
     'newer:react:default',
     'newer:uglify:dev',
-    'newer:copy:dev',
-    'newer:imagemin:dev',
-    'responsive_images:dev'
+    'newer:copy:assets',
+    'newer:copy:assets',
+    'newer:copy:images',
+    'newer:responsive_images:dev'
+  ]);
+
+  grunt.registerTask('prod', [
+    'clean:build',
+    'clean:prod',
+    'newer:cssmin',
+    'newer:react:default',
+    'newer:uglify:prod',
+    'newer:copy:assets',
+    'newer:copy:prod'
+  ]);
+
+  grunt.registerTask('prod-images', [
+    'newer:copy:images',
+    'newer:imagemin:prod',
+    'newer:imageoptim:prod',
+    'newer:responsive_images:prod'
   ]);
 
   grunt.registerTask('deploy', [
     'shell:build',
     'htmlmin:prod',
-    'compress:prod_html',
-    'shell:deploy'
+    'copy:prod_html',
+    's3:css',
+    's3:js',
+    's3:fonts',
+    's3:markup',
+    'cloudfront'
   ]);
+
+  /** Run hugo (shell:build) prior to running this */
+  grunt.registerTask('deploy-images', [
+    's3:assets',
+    's3:images'
+  ]);
+  
 };
