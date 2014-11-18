@@ -2,10 +2,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -41,18 +39,9 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        report: 'min'
+          report: 'min'
       },
-      prod: {
-        files: {
-          'build/js/exifdata.min.js': [
-            'assets/js/exif.js',
-            'assets/js/react-0.12.0.js',
-            'tmp/exifinfo.js'
-          ]
-        }
-      },
-      dev: {
+      default: {
         files: {
           'static/js/exifdata.min.js': [
             'assets/js/exif.js',
@@ -93,14 +82,6 @@ module.exports = function(grunt) {
           dest: 'static/js'
         }]
       },
-      prod: {
-        files: [{
-          expand: true,
-          cwd: 'build/js',
-          src: ['**/*.js'],
-          dest: 'static/js'
-        }]
-      },
       prod_html: {
         files: [{
           expand: true,
@@ -110,30 +91,10 @@ module.exports = function(grunt) {
         }]
       }
     },
-    imagemin: {
-      prod: {
-        files: [{
-          expand: true,
-          cwd: 'assets/photos',
-          src: ['**/*.{png,jpg}'],
-          dest: 'build/images'
-        }]
-      }
-    },
-    imageoptim: {
-      prod: {
-        options: {
-          jpegMini: false,
-          imageAlpha: true,
-          quiteAfter: true
-        },
-        src: ['build/images']
-      }
-    },
     responsive_images: {
       options: {
         engine: 'im',
-        newFilesOnly: true,
+        newFilesOnly: false,
         sizes: [{
           name: 'xsmall',
           width: 320
@@ -148,15 +109,7 @@ module.exports = function(grunt) {
           width: 2048
         }]
       },
-      prod: {
-        files: [{
-          expand: true,
-          src: ['**/*.{png,jpg,gif}'],
-          cwd: 'build/images',
-          dest: 'static/thumb'
-        }]
-      },
-      dev: {
+      default: {
         files: [{
           expand: true,
           src: ['**/*.{png,jpg,gif}'],
@@ -170,7 +123,7 @@ module.exports = function(grunt) {
         removeComments: true,
         collapseWhitespace:  true
       },
-      prod: {
+      default: {
         files: [{
           expand: true,
           cwd: 'public/',
@@ -282,29 +235,23 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', [
     'clean:build',
     'newer:cssmin',
-    'newer:react:default',
-    'newer:uglify:dev',
-    'newer:copy:assets',
+    'newer:react',
+    'newer:uglify',
     'newer:copy:assets',
     'newer:copy:images',
-    'newer:responsive_images:dev'
+    'newer:responsive_images'
   ]);
 
   grunt.registerTask('prod', [
     'clean:build',
     'clean:prod',
     'newer:cssmin',
-    'newer:react:default',
-    'newer:uglify:prod',
+    'newer:react',
+    'newer:uglify',
     'newer:copy:assets',
-    'newer:copy:prod'
-  ]);
+    'copy:images',
+    'responsive_images'
 
-  grunt.registerTask('prod-images', [
-    'newer:copy:images',
-    'newer:imagemin:prod',
-    'newer:imageoptim:prod',
-    'newer:responsive_images:prod'
   ]);
 
   grunt.registerTask('deploy', [
@@ -315,13 +262,8 @@ module.exports = function(grunt) {
     's3:js',
     's3:fonts',
     's3:markup',
-    'cloudfront'
-  ]);
-
-  /** Run hugo (shell:build) prior to running this */
-  grunt.registerTask('deploy-images', [
+    'cloudfront',
     's3:assets',
     's3:images'
-  ]);
-  
+  ]);  
 };
