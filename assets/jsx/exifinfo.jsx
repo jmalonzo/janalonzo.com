@@ -27,8 +27,8 @@
     },
     componentDidMount: function() {
       var rows = []
-          that = this, isGPS = false;
-          img = document.querySelector("img.caption__media");  // FIXME
+          that = this, isGPS = false, hasGPS = false,
+          img = document.querySelector(".image-view-single img.img-responsive");
 
       EXIF.getData(img, function() {
         that.props.value.forEach(function(attr, i) {
@@ -48,10 +48,14 @@
             val = "ISO: " + EXIF.getTag(img, "ISOSpeedRatings");
           } else if (attr == "exposure") {
             var exposure = EXIF.getTag(img, "ExposureTime");
-            if (exposure.denominator <= exposure.numerator) {
-              val = "Exposure: " + exposure.numerator + " second";
+            if (exposure) {
+              if (!exposure.denominator || exposure.denominator <= exposure.numerator) {
+                val = "Exposure: " + exposure.numerator + " second";
+              } else {
+                val = "Exposure: " + exposure.numerator + "/" + exposure.denominator + " seconds"
+              }
             } else {
-              val = "Exposure: " + exposure.numerator + "/" + exposure.denominator + " seconds"
+              val = "Exposure: N/A"
             }
           } else if (attr == "focallength") {
             val = "Focal length: " + (EXIF.getTag(img, "FocalLength") ? EXIF.getTag(img, "FocalLength").numerator : "---") + "mm";
@@ -61,15 +65,20 @@
                 lon = EXIF.getTag(img, "GPSLongitude"),
                 latRef = EXIF.getTag(img, "GPSLatitudeRef") || "N",
                 lonRef = EXIF.getTag(img, "GPSLongitudeRef") || "W";
-            lat = (lat[0] + lat[1]/60 + lat[2]/3600) * (latRef == "N" ? 1 : -1);  
-            lon = (lon[0] + lon[1]/60 + lon[2]/3600) * (lonRef == "W" ? -1 : 1);
-            val = lat + "," + lon;
+            if (lat && lon && latRef && lonRef) {
+              lat = (lat[0] + lat[1]/60 + lat[2]/3600) * (latRef == "N" ? 1 : -1);  
+              lon = (lon[0] + lon[1]/60 + lon[2]/3600) * (lonRef == "W" ? -1 : 1);
+              val = lat + "," + lon;
+              hasGPS = true;
+            } 
           }
 
           if (!isGPS) {
             rows.push(<ExifDataRow key={i} value={val}/>);
           } else {
-            rows.push(<ExifGPSDataRow key={i} value={val}/>);
+            if (hasGPS) {
+              rows.push(<ExifGPSDataRow key={i} value={val}/>);
+            }
           }
         });
         that.setState({rows: rows});
