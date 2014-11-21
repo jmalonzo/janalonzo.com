@@ -133,16 +133,13 @@ module.exports = function(grunt) {
       }
     },
     clean: {
-      build: [
+      default: [
         "static/css",
         "static/js",
-        "build/"
-      ],
-      prod: [
-        "build",
-        "public",
-        "tmp"
-      ],
+        "build/",
+        "tmp",
+        "public"
+      ]
     },
     aws: grunt.file.readJSON("credentials.json"),
     s3: {
@@ -232,26 +229,14 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('dev', [
-    'clean:build',
+  grunt.registerTask('default', [
+    'clean',
     'newer:cssmin',
     'newer:react',
     'newer:uglify',
     'newer:copy:assets',
     'newer:copy:images',
     'newer:responsive_images'
-  ]);
-
-  grunt.registerTask('prod', [
-    'clean:build',
-    'clean:prod',
-    'newer:cssmin',
-    'newer:react',
-    'newer:uglify',
-    'newer:copy:assets',
-    'copy:images',
-    'responsive_images'
-
   ]);
 
   grunt.registerTask('deploy', [
