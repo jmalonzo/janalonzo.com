@@ -236,12 +236,12 @@ module.exports = function(grunt) {
     'newer:uglify',
     'newer:copy:assets',
     'newer:copy:images',
-    'newer:responsive_images'
+    'responsive_images'
   ]);
 
   grunt.registerTask('deploy', [
     'shell:build',
-    'htmlmin:prod',
+    'htmlmin',
     'copy:prod_html',
     's3:css',
     's3:js',
