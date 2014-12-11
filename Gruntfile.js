@@ -10,6 +10,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-react');
   grunt.loadNpmTasks('grunt-aws');
   grunt.loadNpmTasks('grunt-critical');
+  grunt.loadNpmTasks('grunt-webp');
 
   require('load-grunt-tasks')(grunt);
   
@@ -43,7 +44,7 @@ module.exports = function(grunt) {
       },
       default: {
         files: {
-          'static/js/exifdata.min.js': [
+          'static/js/site.min.js': [
             'assets/js/exif.js',
             'assets/js/react-0.12.0.js',
             'tmp/exifinfo.js'
@@ -80,6 +81,16 @@ module.exports = function(grunt) {
           cwd: 'assets/js/vendor',
           src: ['**/*.js'],
           dest: 'static/js'
+        }, {
+          expand: true,
+          cwd: 'assets/fonts',
+          src: ['**/*'],
+          dest: 'static/fonts'
+        }, {
+          expand: true,
+          cwd: 'assets',
+          src: ['google7586b5755010558e.html'],
+          dest: 'static'
         }]
       },
       prod_html: {
@@ -118,6 +129,27 @@ module.exports = function(grunt) {
         }]
       }
     },
+    webp: {
+      options: {
+        preset: 'photo',
+        verbose: true,
+        quality: 80,
+        metadata: 'exif'
+      },
+      default: {
+        files: [{
+          expand: true,
+          src: ['**/*.{png,jpg}'],
+          cwd: 'static/thumb',
+          dest: 'static/thumb'
+        }, {
+          expand: true,
+          src: ['**.*.jpg'],
+          cwd: 'static/assets',
+          dest: 'static/assets'
+        }]
+      }
+    },
     htmlmin: {
       options: {
         removeComments: true,
@@ -134,8 +166,7 @@ module.exports = function(grunt) {
     },
     clean: {
       default: [
-        "static/css",
-        "static/js",
+        "static/",
         "build/",
         "tmp",
         "public"
@@ -157,7 +188,7 @@ module.exports = function(grunt) {
       },
       assets: {
         cwd: "public/assets",
-        src: "**/*.{jpg,png,ico}",
+        src: "**/*.{jpg,png,ico,webp}",
         dest: "assets/"
       },
       css: {
@@ -177,7 +208,7 @@ module.exports = function(grunt) {
       },
       images: {
         cwd: "public/thumb",
-        src: "**",
+        src: "**/*.{jpg,webp}",
         dest: "thumb/"
       },
       markup: {
@@ -199,7 +230,7 @@ module.exports = function(grunt) {
           '/index.html',
           '/photos.html',
           '/css/site.min.css',
-          '/js/exifdata.min.js'
+          '/js/site.min.js'
         ]
       }
     },
@@ -236,7 +267,8 @@ module.exports = function(grunt) {
     'newer:uglify',
     'newer:copy:assets',
     'newer:copy:images',
-    'responsive_images'
+    'responsive_images',
+    'webp'
   ]);
 
   grunt.registerTask('deploy', [
