@@ -4,7 +4,7 @@ draft = false
 title = "turimetta greens"
 categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beaches"]
 description = "Green moss at Turimetta Beach"
-thumbnail = "http://janalonzo.com/thumb/turimetta-greens-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/turimetta-greens-small.jpg"
 +++
 
 {{% img srcname="/thumb/turimetta-greens" title="Green moss at North Turimetta" %}}

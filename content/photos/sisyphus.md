@@ -4,7 +4,7 @@ draft = false
 title = "sisyphus"
 categories = ["Sydney", "Australia", "Sculptures by the Sea"]
 description = "Sisyphus at Scupltures by the Sea, Bondi 2014"
-thumbnail = "http://janalonzo.com/thumb/sisyphus-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/sisyphus-small.jpg"
 +++
 
 {{% img srcname="/thumb/sisyphus" title="Sisyphus by George Andric at Sculptures by the Sea, Bondi 2014." %}}

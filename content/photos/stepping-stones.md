@@ -4,7 +4,7 @@ draft = false
 title = "stepping stones"
 categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beaches"]
 description = "Stepping Stones at Bungan Beach"
-thumbnail = "http://janalonzo.com/thumb/stepping-stones-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/stepping-stones-small.jpg"
 +++
 
 {{% img srcname="/thumb/stepping-stones" title="Stepping stones at Bungan Beach, NSW" %}}

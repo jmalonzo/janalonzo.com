@@ -4,7 +4,7 @@ draft = false
 title = "sydney harbour"
 categories = ["Sydney", "Australia", "Cityscapes"]
 description = "The iconic Sydney Harbour Bridge"
-thumbnail = "http://janalonzo.com/thumb/sydney-harbour-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/sydney-harbour-small.jpg"
 +++
 
 {{% img srcname="/thumb/sydney-harbour" title="Sydney harbour bridge at sunrise" %}}
