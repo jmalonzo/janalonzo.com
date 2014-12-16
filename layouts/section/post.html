@@ -12,38 +12,37 @@
 
 <div class="container">
 
-  <div class="blog-header"><!-- For head spacing.. --></div>
+  <div class="blog-header">
+    <h1 class="blog-title">jm</h1>
+    <p class="lead blog-description">Random musings and ramblings from the trenches.</p>
+  </div>
 
   <div class="row">
 
     <div class="col-sm-8 blog-main">
+      {{ range .Data.Pages }}
       <div class="blog-post" itemscope itemtype="http://schema.org/Article">
         <h2 itemprop="name" class="blog-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p itemprop="articleBody" class="blog-post-meta">{{ .Date.Format "02 Jan 2006, 15:04" }}</p>
-        {{ .Content }}
+        {{ .Summary }}
+        <footer class="pager">
+          <a href="{{ .Permalink }}"><nobr>Read more →</nobr></a>
+        </footer>
       </div>
-<!--      <nav>
+      {{ end }}
+<!--       <nav>
         <ul class="pager">
-          {{ if .Prev }}<li><a href="{{ .Prev.Permalink }}">{{ .Prev.Title }}</a></li>{{ end }}
-          {{ if .Next }}<li><a href="{{ .Next.Permalink }}">{{ .Next.Title }} →</a></li>{{ end }}          
+          <li><a href="#">Previous</a></li>
+          <li><a href="#">Next</a></li>
         </ul>
-        </nav>
+      </nav>
 -->
     </div> <!-- /.blog-main -->
 
     <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
       <div class="sidebar-module sidebar-module-inset">
-        <h4>gist</h4>
-        <p>{{ .Description }}</p>
-        <p>Read in {{ .ReadingTime }} min / {{ .FuzzyWordCount }} words</p>
-      </div>
-      <div class="sidebar-module">
-        <h4>Categories</h4>
-        <ol class="list-unstyled">
-          {{ range .Params.categories }}
-          <li><a href="/categories/{{ . | urlize }}.html">{{ . }}</a>
-          {{ end }}
-        </ol>
+        <h4>About</h4>
+        <p>Jan is a senior developer at Taguchi. Sometimes he takes pictures. Views here are his own and not of his employer's.</p>
       </div>
     </div><!-- /.blog-sidebar -->
   </div>

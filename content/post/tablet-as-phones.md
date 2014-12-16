@@ -2,15 +2,19 @@
 date = "2014-10-19T15:54:43+11:00"
 draft = true
 title = "Tablet as Phones"
-
+categories = ["Tech", "Mobile", "Usability"]
+description = "The pros and cons of using an 8.4-inch tablet as a phone."
 +++
 
 Last month, I dropped my backup phone (S3) and shattered parts of the
 LCD. So I thought I'll have it repaired. It turns out cheap repairs
 don't always work out as well as it should. 
 
-So I decided I'll try to use a tablet that's small enough and light
-enough for everyday use. Like a phone. Enter the 8.4" Galaxy Tab S.
+So I decided that I'll try to use a tablet that's small enough and light
+enough for everyday use. Like a phone.
+
+Enter the [8.4" Galaxy Tab S](http://www.samsung.com/us/mobile/galaxy-tab/SM-T700NZWAXAR).
+
 The Galaxy Tab S is light, and very thin. You can't hold it in one
 hand but general usage is no different to your standard phablet. In
 addition, the Tab S has a Super AMOLED screen which means it's

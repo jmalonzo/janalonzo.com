@@ -1,9 +1,10 @@
 
 html, body{
-   background-repeat: no-repeat;
+   background: #eee url("/assets/bg.jpg") no-repeat center center fixed;
+/*   background-repeat: no-repeat;
    background-position: center center;
    background-attachment: fixed;
-   background-image: url("//www.janalonzo.com/assets/bg.jpg");
+   background-image: url("//www.janalonzo.com/assets/bg.jpg");*/
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;

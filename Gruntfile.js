@@ -11,6 +11,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-aws');
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-webp');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   require('load-grunt-tasks')(grunt);
   
@@ -23,6 +24,12 @@ module.exports = function(grunt) {
         files: {
           'static/css/site.min.css': [
             'assets/css/site.css'
+          ],
+          'static/css/cover.min.css': [
+            'assets/css/cover.css'
+          ],
+          'static/css/blog.min.css': [
+            'assets/css/blog.css'
           ]
         }
       }
@@ -45,9 +52,13 @@ module.exports = function(grunt) {
       default: {
         files: {
           'static/js/site.min.js': [
+            'assets/js/site.js',
             'assets/js/exif.js',
             'assets/js/react-0.12.0.js',
-            'tmp/exifinfo.js'
+            'tmp/exifinfo.js',
+          ],
+          'static/js/styles.min.js': [
+            'assets/js/styles.js'
           ]
         }
       }
@@ -182,7 +193,10 @@ module.exports = function(grunt) {
         gzip: true,
         dryRun: false,
         headers: {
-          CacheControl: 31536000,
+          CacheControl: {
+            MaxAge: 31536000,
+            StaleWhileRevalidate: 86400
+          }
         },
         charset: "utf-8"
       },
@@ -211,10 +225,18 @@ module.exports = function(grunt) {
         src: "**/*.{jpg,webp}",
         dest: "thumb/"
       },
+      images: {
+        cwd: "public/thumb",
+        src: "**/*.{jpg,webp}",
+        dest: "thumb/"
+      },
       markup: {
         options: {
           headers: {
-            CacheControl: 86400
+            CacheControl: {
+              MaxAge: 864000,
+              StaleWhileRevalidate: 1728000
+            }
           }
         },
         cwd: "public",
@@ -230,7 +252,9 @@ module.exports = function(grunt) {
           '/index.html',
           '/photos.html',
           '/css/site.min.css',
-          '/js/site.min.js'
+          '/css/cover.min.css',
+          '/js/site.min.js',
+          '/js/styles.min.js'
         ]
       }
     },
@@ -256,6 +280,16 @@ module.exports = function(grunt) {
         },
         src: './public/photos/newport-rocks.html',
         dest: './build/css/critical.css'
+      }
+    },
+    watch: {
+      css: {
+        files: ['assets/css/**/*.css', 'assets/css/*.css'],
+        tasks: ['cssmin']
+      },
+      js: {
+        files: ['assets/js/**/*.js', 'assets/js/*.js'],
+        tasks: ['uglify']
       }
     }
   });

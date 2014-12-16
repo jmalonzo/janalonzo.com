@@ -1,3 +1,4 @@
+{{ $baseurl := .Site.BaseUrl }}
 {{ partial "header-cover.html" . }}
 
 <div class="site-wrapper">
@@ -7,17 +8,15 @@
         <div class="inner">
           <h3 class="masthead-brand">{{ .Title }}</h3>
           <ul class="nav masthead-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <!--<li><a href="#">Blog</a></li>-->
+            <li class="active"><a href="#">Cover</a></li>
+            <li><a href="/post.html">Blog</a></li>
             <li><a href="/photos.html">Photography</a></li>
-            <li><a href="http://www.janalonzo.info">About</a></li>
-            <li><a href="mailto:jmalonzo@gmail.com">Contact</a></li>
           </ul>
         </div>
       </div>
 
       <div class="inner cover">
-        <img src="https://www.janalonzo.com/assets/profile.png" class="img-circle profile-photo"/>
+        <img src="{{ $baseurl }}/assets/profile.png" class="img-circle profile-photo"/>
         <h1 class="cover-heading">Evolve solutions; when you find a good one, don't stop.</h1>
         <p class="lead">
           {{ with .Site.Params.Description}}{{.}}  {{ else }}A theme based on the pure css blog layout.{{end}}
