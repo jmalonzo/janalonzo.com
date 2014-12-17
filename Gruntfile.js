@@ -251,8 +251,10 @@ module.exports = function(grunt) {
         invalidations: [
           '/index.html',
           '/photos.html',
+          '/post.html',
           '/css/site.min.css',
           '/css/cover.min.css',
+          '/css/blog.min.css',
           '/js/site.min.js',
           '/js/styles.min.js'
         ]
