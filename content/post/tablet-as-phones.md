@@ -1,40 +1,79 @@
 +++
 date = "2014-10-19T15:54:43+11:00"
-draft = true
-title = "Tablet as Phones"
+draft = false
+title = "TabPhones"
 categories = ["Tech", "Mobile", "Usability"]
-description = "The pros and cons of using an 8.4-inch tablet as a phone."
+description = "Exploring the everyday usage of an 8.4' Galaxy Tab S as a 'phone'."
 +++
 
-Last month, I dropped my backup phone (S3) and shattered parts of the
-LCD. So I thought I'll have it repaired. It turns out cheap repairs
-don't always work out as well as it should. 
+I've always been curious about Tablets. I used to own the first
+version of the [Apple iPad](http://store.apple.com/au/ipad) but ended up giving it to my younger cousins.
+It was too big and too heavy. But a few years forward tablets had
+shrunk both in size and weight, making them viable phone alternatives.
+Even more so with the advent of so-called *phablets*, these gadgets
+can do basic things like email, chat, facebook, gaming, etc... way better than
+computing devices of yesteryear.
 
-So I decided that I'll try to use a tablet that's small enough and light
-enough for everyday use. Like a phone.
+As I've damaged my phone while seascaping (sea water and electronics
+don't mix well), I've been looking at ~~an excuse to buy~~alternatives to mobile phones.
+Should I buy another *phablet*? A smaller phone? Or maybe just out of
+curiousity, maybe try to use an actual tablet-sized device and see how
+I go?
 
-Enter the [8.4" Galaxy Tab S](http://www.samsung.com/us/mobile/galaxy-tab/SM-T700NZWAXAR).
+I've held-off buying one. Instead I used an old
+[Galaxy S3](http://www.samsung.com/global/galaxys3/) as my phone and
+see if this smallish phone is good enough. It wasn't. I got so used to
+a bigger-screened phone that I just found it difficult to use a
+smaller phone. Fast-forward a few weeks and whilst waiting for my
+partner in one of the big malls of Jakarta, I accidentally dropped the
+phone and shattered parts of the screen. No biggie, I'm in Jakarta so
+perhaps I could find a cheap place and have it repaired. Well, as it
+turns out cheap repairs don't always work well as I hoped for.
 
-The Galaxy Tab S is light, and very thin. You can't hold it in one
-hand but general usage is no different to your standard phablet. In
-addition, the Tab S has a Super AMOLED screen which means it's
-ultra-sharp. It's the same screen as in the newer Galaxy Note 4s. I
-don't think I would ever want to go back to a non-ultra sharp screen
-after using a Super AMOLED screen.
+So I was shopping for a tablet and a tablet that caught my eye is
+the
+[Galaxy Tab S 8.4"](http://www.samsung.com/id/galaxytabs/?cid=id_ppc_googlesem_tabs_20140922).
+The Super AMOLED screen and really tiny build got my attention. It's
+pretty darn light too. You can't hold it in one hand but general usage
+is no different to your standard phablet. And since these days most of what I do
+on the phone is consuming content either by reading books, articles,
+or looking at gorgeous images at [500px](https://www.500px.com), I
+thought it's the perfect device for someone like me. There are pros
+and cons of course, which I've highlighted below, but overall it's
+perfect for my use-cases.
 
-Some pros and cons:
+Here are some pros and cons after using a tablet-as-a-phone in the
+past quarter or so:
 
-Pros
+__Pros__
 
-* Large screen makes for great viewing, content consumption. Movies,
-reading, browsing, etc...
+* The larger Super AMOLED screen makes for great viewing and content
+  consumption - movies, reading, browsing, chatting, videos, etc...
 
-Cons
+* A lightweight tablet is very portable and easy to carry in your bag.
 
-* Too big to use for chat apps. I talk to my girlfriend plenty of
-  times and typing on these things even with two hands is annoying.
-  And lots of typos. I even contemplated going to back to the Note 3
-  because it's much easier to use chat apps there.
+* Maps are so much better especially if you're using
+  [Google Maps](https://maps.google.com) as an in-car GPS.
 
+__Cons__
+
+* Too big for chat apps. I talk to my girlfriend plenty of times and
+  typing on these things even with two hands is annoying, and causing
+  a lot of typos. I even contemplated going to back to a smaller phone
+  or phablet because it's much easier to use chat apps there.
+
+* Some (popular) apps like Instagram don't support landscape mode.
+
+* Can be unwieldy to hold when you're socializing and waiting for
+  someone's call. For this, I rather have a smaller *phone* that fits
+  in my pocket.
+
+* Can be unwieldy when taking pictures outside. Since it's not in my
+  pocket, I have to take it out of my bag to take a shot, by that time
+  I've already lost my subject (if I'm doing street photography).
+
+In summary, it's really great for general usage. There are just
+certain times when holding a tablet gets unwieldy. But for everyday
+stuff, it exactly fits my day-to-day use-cases.
 
 

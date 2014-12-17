@@ -166,3 +166,9 @@ h6, .h6 {
 .footer p:last-child {
   margin-bottom: 0;
 }
+
+/** My additions/ */
+.readtime {
+   font-size: 0.9em;
+   color: rgba(0,0,0,0.3);
+}

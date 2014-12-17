@@ -13,8 +13,8 @@
 <div class="container">
 
   <div class="blog-header">
-    <h1 class="blog-title">jm</h1>
-    <p class="lead blog-description">Random musings and ramblings from the trenches.</p>
+    <h1 class="blog-title">{{ .Site.Params.BlogTitle }}</h1>
+    <p class="lead blog-description">{{ .Site.Params.BlogDescription }}</p>
   </div>
 
   <div class="row">
@@ -26,7 +26,7 @@
         <p itemprop="articleBody" class="blog-post-meta">{{ .Date.Format "02 Jan 2006, 15:04" }}</p>
         {{ .Summary }}
         <footer class="pager">
-          <a href="{{ .Permalink }}"><nobr>Read more →</nobr></a>
+          <a class="readtime" href="{{ .Permalink }}"><nobr>{{.ReadingTime}} min read →</nobr></a>
         </footer>
       </div>
       {{ end }}
