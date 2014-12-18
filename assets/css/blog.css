@@ -4,8 +4,8 @@
 
 body {
    background-color: #fff;
-   font-family: Georgia, Cambria "Times New Roman", Times, serif;
-   color: #555; /* #aaa; */
+   font-family: Vollkorn, Georgia, Cambria "Times New Roman", Times, serif;
+   color: rgba(85, 85, 85, 0.9);
 }
 
 h1, .h1,

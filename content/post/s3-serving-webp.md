@@ -37,8 +37,8 @@ place.
 Enter the [**&lt;picture&gt;**](http://www.html5rocks.com/en/tutorials/responsive/picture-element/) element.
 
 The **&lt;picture&gt;** element is a new HTML5 element created to
-support responsive images on the web and is also great for ***art
-direction***. It allows you to use the powerful
+support responsive images on the web and is also great for *art
+direction*. It allows you to use the powerful
 [**img srcset**](http://caniuse.com/#feat=srcset) in a very flexible
 way. But another benefit and advantage of the picture element is its
 availability to serve different types of image formats according to
@@ -47,7 +47,7 @@ basically markup, all you need to do is to add *type="image/webp"* to the
 *&lt;source&gt;* element and the browser takes care of serving the
 necessary image type as per the image types the browser supports. No
 need to launch a backend server instance just so you can serve
-**WebP**.
+WebP.
 
 Since *&lt;picture&gt;* is still new, I suggest that you use a
 polyfill such as

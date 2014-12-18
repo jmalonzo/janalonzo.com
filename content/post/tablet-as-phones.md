@@ -30,14 +30,14 @@ phone and shattered parts of the screen. No biggie, I'm in Jakarta so
 perhaps I could find a cheap place and have it repaired. Well, as it
 turns out cheap repairs don't always work well as I hoped for.
 
-So I was shopping for a tablet and a tablet that caught my eye is
-the
+So I was shopping for a tablet and a tablet that caught my eye is the
 [Galaxy Tab S 8.4"](http://www.samsung.com/id/galaxytabs/?cid=id_ppc_googlesem_tabs_20140922).
-The Super AMOLED screen and really tiny build got my attention. It's
-pretty darn light too. You can't hold it in one hand but general usage
-is no different to your standard phablet. And since these days most of what I do
-on the phone is consuming content either by reading books, articles,
-or looking at gorgeous images at [500px](https://www.500px.com), I
+The [Super AMOLED](http://en.wikipedia.org/wiki/AMOLED#Super_AMOLED)
+screen and really tiny build got my attention. It's pretty darn light
+too. You can't hold it in one hand but general usage is no different
+to your standard phablet. And since these days most of what I do on
+the phone is consuming content either by reading books, articles, or
+looking at gorgeous images at [500px](https://www.500px.com), I
 thought it's the perfect device for someone like me. There are pros
 and cons of course, which I've highlighted below, but overall it's
 perfect for my use-cases.
