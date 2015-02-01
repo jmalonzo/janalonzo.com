@@ -11,6 +11,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-aws');
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-webp');
+  grunt.loadNpmTasks('grunt-bpg');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   require('load-grunt-tasks')(grunt);
@@ -161,6 +162,25 @@ module.exports = function(grunt) {
         }]
       }
     },
+    bpg: {
+      default: {
+        options: {
+          binpath: 'bpgenc',
+          compression_level: 8,
+          qp: 28,
+          cftm: 420,
+          color_space: 'ycbcr',
+          bit_depth: 8,
+          lossless: true
+        },
+        files: [{
+          expand: true,
+          src: ['**/*.{jpg,png}'],
+          cwd: 'static/assets',
+          dest: 'static/assets'
+        }]
+      }
+    },
     htmlmin: {
       options: {
         removeComments: true,
@@ -291,7 +311,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['assets/js/**/*.js', 'assets/js/*.js'],
-        tasks: ['uglify']
+        tasks: ['react', 'uglify']
       }
     }
   });
@@ -304,7 +324,8 @@ module.exports = function(grunt) {
     'newer:copy:assets',
     'newer:copy:images',
     'responsive_images',
-    'webp'
+    'webp',
+    'bpg'
   ]);
 
   grunt.registerTask('deploy', [
