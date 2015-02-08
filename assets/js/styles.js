@@ -2,6 +2,7 @@
   // https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery
   var cb = function() {
     var styles = [
+      "//fonts.googleapis.com/css?family=Roboto+Slab",
       "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800&subset=latin,latin-ext",
       "//www.janalonzo.com/css/font-awesome.min.css"
     ]

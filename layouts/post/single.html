@@ -1,15 +1,5 @@
 {{ partial "header-blog.html" . }}
 
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item" href="/index.html">Cover</a>
-          <a class="blog-nav-item active" href="/post.html">Blog</a>
-          <a class="blog-nav-item" href="/photos.html">Photography</a>
-        </nav>
-      </div>
-    </div>
-
 <div class="container">
 
   <div class="blog-header"><!-- For head spacing.. --></div>
@@ -38,7 +28,7 @@
         <p>Read in {{ .ReadingTime }} min / {{ .FuzzyWordCount }} words</p>
       </div>
       <div class="sidebar-module">
-        <h4>Categories</h4>
+        <h4>tags</h4>
         <ol class="list-unstyled">
           {{ range .Params.categories }}
           <li><a href="/categories/{{ . | urlize }}.html">{{ . }}</a>

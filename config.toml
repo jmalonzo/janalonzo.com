@@ -11,8 +11,8 @@ canonifyurls = true
 
 [params]
     Description = "When I'm not juggling code, I go out and photograph some of the amazing places and beaches in Sydney. Dreamer. Builder. Learner."
-    BlogTitle = "jm"
-    BlogDescription = "Random musings and ramblings from the trenches."
+    BlogTitle = "Jan Alonzo"
+    BlogDescription = "Tech & Photography, mostly."
     twitter = "jmalonzo"
     github = "jmalonzo"
     gplus = "+JanMichaelAlonzo"
