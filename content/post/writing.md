@@ -3,7 +3,7 @@ categories = ["Notes"]
 date = "2015-02-11T09:56:30+11:00"
 description = "Wherein I discuss my plan to write more & think less."
 draft = false
-title = "writing"
+title = "Writing"
 +++
 
 It's been a while since I had a blog. Back then I was a young and
