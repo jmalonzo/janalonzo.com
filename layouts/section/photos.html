@@ -2,7 +2,13 @@
 {{ partial "content-header.html" . }}
 
 
-<div class="container-fluid">
+<ul class="photoset">
+  {{ range .Data.Pages }}
+  <li itemscope itemtype="http://schema.org/Photograph">
+    {{ .Content }}
+  </li>
+  {{ end }}
+  <!--
   <div class="row">    
     {{ range .Data.Pages }}
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" itemscope itemtype="http://schema.org/Photograph">
@@ -25,7 +31,8 @@
     </div>
     {{ end }}
   </div>
-</div>
+  -->  
+</ul>
 
 {{ partial "footer.html" . }}
 {{ partial "end.html" . }}

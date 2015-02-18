@@ -3,7 +3,8 @@
  */
 
 body {
-   background-color: #fff;
+   background-color: rgb(255, 255, 255);
+   background-color: rgba(255, 255, 255, 0.8);
    font-family: "Roboto Slab", Georgia, Cambria "Times New Roman", Times, serif;
    color: rgb(35, 35, 35);
    color: rgba(35, 35, 35, 0.8);
@@ -26,7 +27,7 @@ h6, .h6 {
    font-weight: 700; 
    color: #333; /* #ddd;*/
    font-size: 32px;
-   letter-spacing: -0.04em;
+   letter-spacing: -0.01em;
    margin-bottom: 8px;
 }
 
@@ -46,12 +47,12 @@ h6, .h6 {
  */
 
 .blog-masthead {
-   background-color: rgba(255,255,255,0.6); /* #428bca*/
+   background-color: rgb(255,255,255);
+   background-color: rgba(255,255,255,0.6);
    opacity: 0.8;
    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-   
 }
 
 /* Nav links */
@@ -61,18 +62,22 @@ h6, .h6 {
    padding: 10px;
    font-weight: 400;
    font-size: 16px;
+   color: rgb(0, 0, 0);
    color: rgba(0, 0, 0, 0.8);
    letter-spacing: 0.1em;
 }
 .blog-nav-item:hover,
-.blog-nav-item:focus {
-  color: rgb(66,139,202, 0.8);
-  text-decoration: none;
-}
+      .blog-nav-item:focus {
+         color: rgb(66,139,202);
+         color: rgba(66,139,202, 0.8);
+         text-decoration: none;
+      }
 
 /* Active state gets a caret at the bottom */
 .blog-nav .active {
-  color: rgb(66,139,202, 0.8);
+   color: rgb(0, 0, 0);
+   color: rgba(0, 0, 0, 0.8);
+   font-weight: 800;
 }
 .blog-nav .active:after {
   position: absolute;
@@ -102,11 +107,13 @@ h6, .h6 {
    margin-bottom: 0;
    font-size: 52px;
    font-weight: 700;
-   letter-spacing: -0.04em;
-   color: rgba(0,0,0,0.8)
+   letter-spacing: -0.01em;
+   color: rgb(0,0,0);
+   color: rgba(0,0,0,0.8);
 }
 .blog-description {
    font-size: 20px;
+   color: rgb(51,51,51);
    color: rgba(51,51,51,.7);
 }
 
@@ -116,17 +123,19 @@ h6, .h6 {
  */
 
 .blog-main {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
 /* Sidebar modules for boxing content */
 .blog-sidebar {
    background-color: #fafafa;
+   color: rgb(0,0,0);
    color: rgba(0,0,0,0.44);
 }
 
 .blog-sidebar a {
+   color: rgb(0,0,0);
    color: rgba(0,0,0,0.44);
 }
 
@@ -175,6 +184,7 @@ h6, .h6 {
 }
 .blog-post-meta {
    margin-bottom: 20px;
+   color: rgb(51,51,51);
    color: rgba(51,51,51,.7);
 }
 
@@ -185,6 +195,7 @@ h6, .h6 {
 
 .footer {
    padding: 40px 0;
+   color: rgb(51,51,51);
    color: rgba(51,51,51,.7);
    text-align: center;
    background-color: #f9f9f9;
@@ -197,5 +208,6 @@ h6, .h6 {
 /** My additions/ */
 .readtime {
    font-size: 0.9em;
+   color: rgb(0,0,0);
    color: rgba(0,0,0,0.3);
 }
