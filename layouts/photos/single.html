@@ -1,27 +1,8 @@
 {{ partial "header.html" . }}
-{{ partial "header-single.html" . }}
+{{ partial "content-header.html" . }}
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-18 col-md-12">
-      <div class="image-view-single">
-        {{ .Content }}
-      </div>
-
-      <!-- Modal -->
-      <div class="modal fade" id="exif-modal" tabindex="-1" role="dialog" aria-labelledby="modal-shoot-details" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-              <h4 class="modal-title" id="modal-shoot-details">{{ .Title }}</h4>
-            </div>
-            <div class="modal-body exif-data-table"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="photoset__item--single" itemscope itemtype="http://schema.org/Photograph">
+  {{ .Content }}
 </div>
 
 {{ partial "end-photos-single.html" . }}
