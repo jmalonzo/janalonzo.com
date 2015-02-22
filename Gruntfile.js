@@ -212,6 +212,7 @@ module.exports = function(grunt) {
         region: "ap-southeast-2",
         gzip: true,
         dryRun: false,
+        maxRetries: 10,
         headers: {
           CacheControl: {
             MaxAge: 31536000,
@@ -239,11 +240,6 @@ module.exports = function(grunt) {
         cwd: "public/fonts",
         src: "**",
         dest: "fonts/"
-      },
-      images: {
-        cwd: "public/thumb",
-        src: "**/*.{jpg,webp}",
-        dest: "thumb/"
       },
       images: {
         cwd: "public/thumb",
