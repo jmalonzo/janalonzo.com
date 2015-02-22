@@ -312,6 +312,10 @@ module.exports = function(grunt) {
       js: {
         files: ['assets/js/**/*.js', 'assets/js/*.js'],
         tasks: ['react', 'uglify']
+      },
+      images: {
+        files: ['assets/photos/*'],
+        tasks: ['newer:copy:images', 'responsive_images', 'webp']
       }
     }
   });

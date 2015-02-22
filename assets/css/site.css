@@ -46,6 +46,7 @@ body {
    display: flex;
    position: relative;
    margin: 10px;
+   align-items: center;
    list-style-type: none;
 }
 
@@ -111,5 +112,12 @@ body {
       -webkit-flex: 1 0 100px;
       -ms-flex: 1 0 100px;
       flex: 1 0 100px;
+   }
+}
+
+@media only screen and (min-width: 1024px) {
+   /* FIXME is this necessary? */
+   .photoset__item--single img {
+      max-height: 1024px;
    }
 }
