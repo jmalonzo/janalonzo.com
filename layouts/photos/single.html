@@ -1,8 +1,13 @@
 {{ partial "header.html" . }}
-{{ partial "content-header.html" . }}
-
+<nav class="navbar" role="navigation">
+  <ol class="breadcrumb">
+    <li><a href="/index.html">Cover</a></li>
+    <li><a href="/photos.html">Images</a></li>
+    <li class="active">{{ .Title }}</li>
+  </ol>
+</nav>
 <main class="photoset__item--single" itemscope itemtype="http://schema.org/Photograph">
   {{ .Content }}
-</div>
-
-{{ partial "end-photos-single.html" . }}
+</main>
+{{ partial "footer.html" . }}
+{{ partial "end.html" . }}

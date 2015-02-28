@@ -1,25 +1,32 @@
 {{ partial "header.html" . }}
-{{ partial "content-header.html" . }}
-<ul class="photoset">
-  {{ range .Data.Pages }}
-  <li class="photoset__item" itemscope itemtype="http://schema.org/Photograph">
-    {{ .Content }}
-    <div class="photoset__item--overlay">
-      <h3>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </h3>
-      <p>
-        {{ .Date.Format "02 Jan 2006" }}
-      </p>
-      <p>
-        {{ if isset .Params "categories" }}
-        {{ range .Params.categories }}
-        <a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">{{ . }}</a>
-        {{ end }}{{ end }}
-      </p>
-    </div>
-  </li>
-  {{ end }}
-</ul>
+<nav class="navbar" role="navigation">
+  <ol class="breadcrumb">
+    <li><a href="/index.html">Cover</a></li>
+    <li class="active">{{ .Title }}</li>
+  </ol>
+</nav>
+<main>
+  <ul class="photoset">
+    {{ range .Data.Pages }}
+    <li class="photoset__item" itemscope itemtype="http://schema.org/Photograph">
+      {{ .Content }}
+      <div class="photoset__item--overlay">
+        <h3>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        <p>
+          {{ .Date.Format "02 Jan 2006" }}
+        </p>
+        <p>
+          {{ if isset .Params "categories" }}
+          {{ range .Params.categories }}
+          <a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">{{ . }}</a>
+          {{ end }}{{ end }}
+        </p>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</main>
 {{ partial "footer.html" . }}
 {{ partial "end.html" . }}
