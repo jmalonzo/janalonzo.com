@@ -1,42 +1,47 @@
 {{ partial "header-blog.html" . }}
 
-<div class="container">
+<nav class="navbar" role="navigation">
+  <ol class="breadcrumb">
+    <li><a href="/index.html">Cover</a></li>
+    <li class="active">{{ .Title }}</li>
+  </ol>
+</nav>
 
-  <div class="blog-header">
-    <h1 class="blog-title">{{ .Site.Params.BlogTitle }}</h1>
-    <p class="lead blog-description">{{ .Site.Params.BlogDescription }}</p>
-  </div>
-
-  <div class="row">
-
-    <div class="col-sm-8 blog-main">
-      {{ range .Data.Pages }}
-      <div class="blog-post" itemscope itemtype="http://schema.org/Article">
-        <h2 itemprop="name" class="blog-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <p itemprop="articleBody" class="blog-post-meta">{{ .Date.Format "02 Jan 2006, 15:04" }}</p>
-        {{ .Summary }}
-        <footer class="pager">
-          <a class="readtime" href="{{ .Permalink }}"><nobr>{{.ReadingTime}} min read →</nobr></a>
-        </footer>
+<main role="main">
+  <aside class="spacer">&nbsp;</aside>
+  <div class="content">
+    <header>
+      <h1 class="title">{{ .Site.Params.BlogTitle }}</h1>
+      <p>{{ .Site.Params.BlogDescription }}</p>
+    </header>
+    {{ range .Data.Pages }}
+    <article>
+      <div itemscope itemtype="http://schema.org/Article">
+        <header>
+          <h2 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <time itemprop="articleBody">{{ .Date.Format "02 Jan 2006" }}</time>
+        </header>
+        <p>{{ .Summary }}</p>
+        <p class="readtime">
+          <a href="{{ .Permalink }}"><nobr>{{.ReadingTime}} min read →</nobr></a>
+        </p>
       </div>
-      {{ end }}
-<!--       <nav>
-        <ul class="pager">
-          <li><a href="#">Previous</a></li>
-          <li><a href="#">Next</a></li>
-        </ul>
-      </nav>
--->
-    </div> <!-- /.blog-main -->
-
-    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-      <div class="sidebar-module sidebar-module-inset">
-        <h4>about</h4>
-        <p>Jan is a senior developer at Taguchi. Sometimes he takes pictures. Views here are his own and not of his employer's.</p>
-      </div>
-    </div><!-- /.blog-sidebar -->
+    </article>
+    {{ end }}
   </div>
-</div>
-
+  <aside>
+    <div class="aside">
+      <h4>/me</h4>
+      <p>Jan is a senior developer at <a href="http://www.taguchi.com.au">Taguchi</a>.
+        He occasionally takes pictures of landscapes and seascapes, mostly on weekends
+        with the <a href="http://www.focusphotographers.org">FOCUS landscape and seascape
+          Australia group</a>.
+      </p>
+      <p>
+        Views here are his own and not of his employer's.
+      </p>
+    </div>
+  </aside>
+</main>
 {{ partial "footer.html" . }}
 {{ partial "end.html" . }}

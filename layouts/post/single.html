@@ -1,43 +1,52 @@
 {{ partial "header-blog.html" . }}
 
-<div class="container">
+<nav class="navbar" role="navigation">
+  <ol class="breadcrumb">
+    <li><a href="/index.html">Cover</a></li>
+    <li><a href="/post.html">Posts</a></li>
+    <li class="active">{{ .Title }}</li>
+  </ol>
+</nav>
 
-  <div class="blog-header"><!-- For head spacing.. --></div>
-
-  <div class="row">
-
-    <div class="col-sm-8 blog-main">
-      <div class="blog-post" itemscope itemtype="http://schema.org/Article">
-        <h2 itemprop="name" class="blog-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <p itemprop="articleBody" class="blog-post-meta">{{ .Date.Format "02 Jan 2006, 15:04" }}</p>
-        {{ .Content }}
-      </div>
+<main>
+  <aside class="spacer">&nbsp;</aside>
+  <article>
+    <div itemscope itemtype="http://schema.org/Article">
+      <header>
+        <h2 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <time itemprop="articleBody">{{ .Date.Format "02 Jan 2006" }}</time>
+      </header>
+      {{ .Content }}
+    </div>
 <!--      <nav>
-        <ul class="pager">
-          {{ if .Prev }}<li><a href="{{ .Prev.Permalink }}">{{ .Prev.Title }}</a></li>{{ end }}
-          {{ if .Next }}<li><a href="{{ .Next.Permalink }}">{{ .Next.Title }} →</a></li>{{ end }}          
-        </ul>
-        </nav>
+      <ul class="pager">
+        {{ if .Prev }}<li><a href="{{ .Prev.Permalink }}">{{ .Prev.Title }}</a></li>{{ end }}
+        {{ if .Next }}<li><a href="{{ .Next.Permalink }}">{{ .Next.Title }} →</a></li>{{ end }}
+      </ul>
+      </nav>
 -->
-    </div> <!-- /.blog-main -->
+  </article>
+  <aside>
+    <div class="aside">
+      <h4>Gist</h4>
+      <p>{{ .Description }}</p>
+      <p>Read in {{ .ReadingTime }} min / {{ .FuzzyWordCount }} words</p>
+    </div>
+    <div class="aside">
+      <h4>Tagged in</h4>
+      <ol>
+        {{ range .Params.categories }}
+        <li>
+          <!--<a href="/categories/{{ . | urlize }}.html">-->
+            {{ . }}
+          <!--</a>-->
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+  </aside>
 
-    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-      <div class="sidebar-module sidebar-module-inset">
-        <h4>gist</h4>
-        <p>{{ .Description }}</p>
-        <p>Read in {{ .ReadingTime }} min / {{ .FuzzyWordCount }} words</p>
-      </div>
-      <div class="sidebar-module">
-        <h4>tags</h4>
-        <ol class="list-unstyled">
-          {{ range .Params.categories }}
-          <li><a href="/categories/{{ . | urlize }}.html">{{ . }}</a>
-          {{ end }}
-        </ol>
-      </div>
-    </div><!-- /.blog-sidebar -->
-  </div>
-</div>
+</main>
 
 {{ partial "footer.html" . }}
 {{ partial "end.html" . }}

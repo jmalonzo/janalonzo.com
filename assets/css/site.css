@@ -1,5 +1,4 @@
 
-html,
 body {
   display: -webkit-flex;
   display: flex;
@@ -13,7 +12,7 @@ body {
   justify-content: center;
   background-color: rgb(0,0,0);
   font-family: Georgia, Cambria "Times New Roman", Times, serif;
-  min-height: 100vh;
+  min-height: 98vh;
 }
 
 nav {
