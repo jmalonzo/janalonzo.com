@@ -170,12 +170,17 @@ main article p a:active {
 main > aside {
   display: -webkit-flex;
   display: flex;
-  -webkit-flex: 0 0 35em;
-  flex: 0 0 35em;
+  -webkit-flex: 1 0 35em;
+  flex: 1 0 35em;
   -webkit-flex-direction: column;
   flex-direction: column;
   margin-top: 2em;
   padding: 2em;
+}
+
+main > .spacer {
+  -webkit-flex: 0 1 35em;
+  flex: 0 1 35em;
 }
 
 .aside {
@@ -222,11 +227,27 @@ main > aside {
   color: rgba(0,0,0,0.4);
 }
 
+@media only screen and (max-width: 1024px) {
+  main {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    flex: 0;
+  }
+}
 
 /* http://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 /* Smartphones (Portrait and landscape) ----------- */
 @media only screen
-and (min-width : 321px)
+and (min-device-width : 321px)
 and (max-device-width : 480px) {
   main {
     -webkit-flex-direction: column;

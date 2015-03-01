@@ -1,6 +1,6 @@
 +++
 categories = ["Tech", "Web", "Layout", "CSS"]
-date = "2015-03-1T17:30:46+11:00"
+date = "2015-03-01T17:30:46+11:00"
 description = "Flexbox is a new way to do layout in the web. Here are my thoughts."
 draft = false
 title = "Flexbox"
