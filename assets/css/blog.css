@@ -170,8 +170,8 @@ main article p a:active {
 main > aside {
   display: -webkit-flex;
   display: flex;
-  -webkit-flex: 1 0 35em;
-  flex: 1 0 35em;
+  -webkit-flex: 1 1 35em;
+  flex: 1 1 35em;
   -webkit-flex-direction: column;
   flex-direction: column;
   margin-top: 2em;
@@ -181,6 +181,10 @@ main > aside {
 main > .spacer {
   -webkit-flex: 0 1 35em;
   flex: 0 1 35em;
+}
+
+main > aside:not(.spacer) {
+    min-width: 10em;
 }
 
 .aside {
