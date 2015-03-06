@@ -9,13 +9,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-react');
   grunt.loadNpmTasks('grunt-aws');
-  grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-webp');
   grunt.loadNpmTasks('grunt-bpg');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   require('load-grunt-tasks')(grunt);
-  
+
   grunt.initConfig({
     cssmin: {
       options: {
@@ -284,22 +283,6 @@ module.exports = function(grunt) {
         command: 'hugo --uglyUrls=true'
       }
     },
-    critical: {
-      test: {
-        options: {
-          base: "./",
-          css: [
-            'assets/css/site.css',
-            'assets/css/bootstrap.css',
-            'assets/css/bootstrap-theme.css'
-          ],
-          width: 320,
-          height: 480
-        },
-        src: './public/photos/newport-rocks.html',
-        dest: './build/css/critical.css'
-      }
-    },
     watch: {
       css: {
         files: ['assets/css/**/*.css', 'assets/css/*.css'],
@@ -328,6 +311,13 @@ module.exports = function(grunt) {
     'bpg'
   ]);
 
+  grunt.registerTask('noimages', [
+    'newer:cssmin',
+    'newer:react',
+    'newer:uglify',
+    'newer:copy:assets'
+  ]);
+
   grunt.registerTask('deploy', [
     'shell:build',
     'htmlmin',
@@ -339,5 +329,5 @@ module.exports = function(grunt) {
     'cloudfront',
     's3:assets',
     's3:images'
-  ]);  
+  ]);
 };

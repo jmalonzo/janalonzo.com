@@ -4,21 +4,20 @@
   "private": true,
   "devDependencies": {
     "bower": "1.3",
-    "grunt": "~0.4.2",
+    "grunt": "~0.4.5",
     "grunt-aws": "^0.4.0",
     "grunt-bpg": "^0.2.0",
     "grunt-contrib-clean": "0",
-    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-cssmin": "0",
-    "grunt-contrib-htmlmin": "^0.3.0",
-    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-critical": "0.0.3",
-    "grunt-newer": "^0.8.0",
+    "grunt-newer": "^1.1.0",
     "grunt-react": "^0.10.0",
-    "grunt-responsive-images": "^0.1.4",
-    "grunt-shell": "^1.1.1",
+    "grunt-responsive-images": "^0.1.6",
+    "grunt-shell": "^1.1.2",
     "grunt-webp": "0.0.4",
-    "load-grunt-tasks": "^1.0.0"
+    "load-grunt-tasks": "^3.1.0"
   }
 }
