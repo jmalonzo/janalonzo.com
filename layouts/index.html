@@ -1,50 +1,44 @@
 {{ $baseurl := .Site.BaseUrl }}
 {{ partial "header-cover.html" . }}
 
-<div class="site-wrapper">
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">{{ .Title }}</h3>
-          <ul class="nav masthead-nav">
-            <li class="active"><a href="#">Cover</a></li>
-            <li><a href="/post.html">Notes</a></li>
-            <li><a href="/photos.html">Images</a></li>
-          </ul>
-        </div>
-      </div>
+<div class="parallax">
 
-      <div class="inner cover">
-        <img src="{{ $baseurl }}/assets/profile.png" class="img-circle profile-photo"/>
+  <div class="overview__cover parallax__group">
+<!--   <div class="parallax__layer parallax__layer--back">
+    </div>-->
+    <div class="overview__cover--content parallax__layer parallax__layer--base">
+      <nav class="navbar" role="navigation">
+        <ol class="breadcrumb">
+          <li><a href="/photos.html">Gallery</a></li>
+          <li><a href="/post.html">Notes</a></li>
+          <li class="active">{{ .Title }}</li>
+        </ol>
+      </nav>
+      <article>
+        <img src="{{ $baseurl }}/assets/profile.png" class="profile__photo"/>
         <h1 class="cover-heading">Evolve solutions; when you find a good one, don't stop.</h1>
         <p class="lead">
           {{ with .Site.Params.Description}}{{.}}  {{ else }}A theme based on the pure css blog layout.{{end}}
         </p>
-        <div class="lead btn-group">
-          <a class="btn-social btn btn-default" href="https://twitter.com/{{ .Site.Params.twitter }}" class="pure-button">
-            <i class="fa fa-2x fa-twitter"></i>
+        <div class="social__buttons">
+          <a class="social__button" href="https://twitter.com/{{ .Site.Params.twitter }}">
+            <i class="fa fa-lg fa-twitter"></i>
           </a>
-          <a class="btn-social btn btn-default" href="https://github.com/{{.Site.Params.github }}" class="pure-button">
-            <i class="fa fa-2x fa-github"></i>
+          <a class="social__button" href="https://github.com/{{.Site.Params.github }}">
+            <i class="fa fa-lg fa-github"></i>
           </a>
-          <a class="btn-social btn btn-default" href="https://google.com/{{.Site.Params.gplus }}" class="pure-button">
-            <i class="fa fa-2x fa-google-plus"></i>
+          <a class="social__button" href="https://google.com/{{.Site.Params.gplus }}">
+            <i class="fa fa-lg fa-google-plus"></i>
           </a>
-          <a class="btn-social btn btn-default" href="https://linkedin.com/in/{{.Site.Params.linkedin }}" class="pure-button">
-            <i class="fa fa-2x fa-linkedin"></i>
+          <a class="social__button" href="https://linkedin.com/in/{{.Site.Params.linkedin }}">
+            <i class="fa fa-lg fa-linkedin"></i>
           </a>
-          <a class="btn-social btn btn-default" href="https://facebook.com/{{.Site.Params.facebook }}">
-            <i class="fa fa-2x fa-facebook"></i>
-          </a> 
-        </div>
+          <a class="social__button" href="https://facebook.com/{{.Site.Params.facebook }}">
+            <i class="fa fa-lg fa-facebook"></i>
+          </a>
+        </div> 
       </div>
-
-      <div class="mastfoot">
-        <div class="inner">
-          {{ partial "footer.html" . }}
-        </div>
-      </div>
+      </article>
     </div>
   </div>
 </div>

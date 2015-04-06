@@ -28,6 +28,16 @@ a, a:hover, a:active {
    text-decoration: none;
 }
 
+img {
+    border-radius: 1px;
+    image-rendering: auto;
+}
+
+.center {
+   margin-left: auto;
+   margin-right: auto;
+}
+
 h1, h2, h3,
 h4, h5, h6 {
    margin-top: 0;
@@ -251,8 +261,8 @@ main > aside:not(.spacer) {
 /* http://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 /* Smartphones (Portrait and landscape) ----------- */
 @media only screen
-and (min-device-width : 321px)
-and (max-device-width : 480px) {
+and (min-width : 321px)
+and (max-width : 480px) {
   main {
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -271,8 +281,8 @@ and (max-device-width : 480px) {
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
+and (min-width : 768px)
+and (max-width : 1024px) {
   main {
     -webkit-flex-direction: column;
     flex-direction: column;

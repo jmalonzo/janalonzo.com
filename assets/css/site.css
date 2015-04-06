@@ -50,6 +50,7 @@ figure, h2, p {
 
 img {
   border-radius: 1px;
+  image-rendering: auto;
 }
 
 ol.breadcrumb {
@@ -139,10 +140,11 @@ li {
    position: absolute;
    top: 0; left: 0;
    /** */
-   color: rgb(255,255,255);
-   color: rgba(255,255,255,0.8);
+   color: rgb(170,170,170);
+   color: rgba(170,170,170,0.8);
    font-size: 0.8em;
    text-transform: capitalize;
+   mix-blend-mode: screen;
    /** */
    background: rgb(21, 21, 21);
    background: rgba(21, 21, 21, 0.9);
@@ -155,9 +157,9 @@ li {
 }
 
 .photoset a, .photoset a:active, .photoset a:hover {
-   color: rgb(255,255,255);
-   color: rgba(255,255,255,0.8);
-   text-decoration: none;
+    color: rgb(170,170,170);
+    color: rgba(170,170,170,0.8);
+    text-decoration: none;
 }
 
 .photoset__item:hover .photoset__item--overlay {
