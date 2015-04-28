@@ -7,7 +7,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-react');
   grunt.loadNpmTasks('grunt-aws');
   grunt.loadNpmTasks('grunt-webp');
   grunt.loadNpmTasks('grunt-bpg');
@@ -34,29 +33,12 @@ module.exports = function(grunt) {
         }
       }
     },
-    react: {
-      default: {
-        files: [{
-          expand: true,
-          cwd: 'assets/jsx',
-          src: ['**/*.jsx'],
-          dest: 'tmp',
-          ext: '.js'
-        }]
-      }
-    },
     uglify: {
       options: {
           report: 'min'
       },
       default: {
         files: {
-          'static/js/site.min.js': [
-            'assets/js/site.js',
-            'assets/js/exif.js',
-            'assets/js/react-0.12.0.js',
-            'tmp/exifinfo.js',
-          ],
           'static/js/styles.min.js': [
             'assets/js/styles.js'
           ]
@@ -270,7 +252,6 @@ module.exports = function(grunt) {
           '/css/site.min.css',
           '/css/cover.min.css',
           '/css/blog.min.css',
-          '/js/site.min.js',
           '/js/styles.min.js'
         ]
       }
@@ -290,7 +271,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['assets/js/**/*.js', 'assets/js/*.js'],
-        tasks: ['react', 'uglify']
+        tasks: ['uglify']
       },
       images: {
         files: ['assets/photos/*'],
@@ -302,7 +283,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'clean',
     'newer:cssmin',
-    'newer:react',
     'newer:uglify',
     'newer:copy:assets',
     'newer:copy:images',
@@ -313,7 +293,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('noimages', [
     'newer:cssmin',
-    'newer:react',
     'newer:uglify',
     'newer:copy:assets'
   ]);
