@@ -1,20 +1,12 @@
 baseurl = "https://www.janalonzo.com"
 #baseurl = "http://localhost:1313"
 languageCode = "en-us"
-title = "Jan Michael Alonzo"
-description = "My personal blog, notes, and some photography here and there"
 canonifyurls = true
+title = "/public/"
 
 [indexes]
     category = "categories"
     tag = "tags"
 
 [params]
-    Description = "When I'm not juggling code, I go out and photograph some of the amazing places and beaches in Sydney. Dreamer. Builder. Learner."
-    BlogTitle = "Jan Alonzo"
-    BlogDescription = "Tech & Photography, mostly."
-    twitter = "jmalonzo"
-    github = "jmalonzo"
-    gplus = "+JanMichaelAlonzo"
-    linkedin = "jmalonzo"
-    facebook = "jmalonzo"
+    Tagline = ""

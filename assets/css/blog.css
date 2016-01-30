@@ -3,18 +3,18 @@ body {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   -webkit-align-items: stretch;
   align-items: stretch;
   -webkit-justify-content: center;
   justify-content: center;
   min-height: 98vh;
-  background-color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.8);
-  font-family: Georgia, Cambria "Times New Roman", Times, serif;
-  color: rgb(35, 35, 35);
+  font-family: 'Lora', sans-serif;
   color: rgba(35, 35, 35, 0.8);
 }
 
@@ -23,7 +23,6 @@ p {
 }
 
 a, a:hover, a:active {
-   color: rgb(0,0,0);
    color: rgba(0,0,0,0.8);
    text-decoration: none;
 }
@@ -43,7 +42,6 @@ h4, h5, h6 {
    margin-top: 0;
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-weight: 700;
-   color: rgb(51, 51, 51);
    color: rgba(51, 51, 51, 1.0);
    letter-spacing: -0.01em;
    margin-bottom: 4px;
@@ -56,7 +54,6 @@ h3 { font-size: 18px; }
 blockquote {
   font-style: italic;
   font-size: 0.6em;
-  background-color: rgb(141,141,141);
   background-color: rgba(141,141,141, 0.2);
   border-radius: 4px;
   padding: 2em;
@@ -68,12 +65,11 @@ blockquote {
 nav {
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: right;
+  justify-content: right;
   margin: 0;
   padding: 0;
   opacity: 0.8;
-  background-color: rgb(255,255,255);
   background-color: rgba(255,255,255,0.6);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
@@ -84,13 +80,14 @@ main {
   display: -webkit-flex;
   display: flex;
   -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 footer, footer a {
-  color: rgb(51,51,51);
   color: rgba(51,51,51,.7);
   font-size: 0.8em;
   text-align: center;
@@ -109,7 +106,6 @@ nav > ol  {
 }
 
 .breadcrumb>li+li:before {
-  color: rgb(119,119,119);
   color: rgba(119,119,119,.8);
   content: "\21e5\00a0";
 }
@@ -118,7 +114,6 @@ main .content > header {
   padding: 2em;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: rgb(0,0,0);
   color: rgba(0,0,0,0.6);
   font-size: 18px;
   word-wrap: break-word;
@@ -141,41 +136,43 @@ main > .content {
   -webkit-align-items: flex-start;
   align-items: flex-start;
   -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
-main article > div {
+main .entry {
   -webkit-display: flex;
   display: flex;
   -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   -webkit-align-items: flex-start;
   align-items: flex-start;
   -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2em;
+  padding: 1.2em;
 }
 
-main article p {
-  margin-bottom: 20px;
-  line-height: 1.45;
+main .entry > p {
+  margin-bottom: 1.2em;
+  line-height: 1.25;
   letter-spacing: .005rem;
   font-size: 16px;
 }
 
-main article header {
-  margin-bottom: 30px;
+main .entry > header {
+  margin-bottom: 0.9em;
 }
 
-main article header time {
+main .entry .datesection {
   font-size: 0.9em;
   opacity: 0.6;
 }
 
-main article p a,
-main article p a:hover,
-main article p a:active {
-   color: rgb(0,0,0);
+main .entry p a,
+main .entry p a:hover,
+main .entry p a:active {
    color: rgba(0,0,0,0.8);
    text-decoration: underline;
 }
@@ -184,8 +181,10 @@ main > aside {
   display: -webkit-flex;
   display: flex;
   -webkit-flex: 1 1 35em;
+  -ms-flex: 1 1 35em;
   flex: 1 1 35em;
   -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 2em;
   padding: 2em;
@@ -193,6 +192,7 @@ main > aside {
 
 main > .spacer {
   -webkit-flex: 0 1 35em;
+  -ms-flex: 0 1 35em;
   flex: 0 1 35em;
 }
 
@@ -208,10 +208,11 @@ main > aside:not(.spacer) {
   -webkit-align-items: flex-start;
   align-items: flex-start;
   -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-color: rgb(141,141,141);
   background-color: rgba(141,141,141, 0.2);
   border-radius: 8px;
   padding: 1em;
@@ -226,7 +227,6 @@ main > aside:not(.spacer) {
   line-height: 1.45;
   letter-spacing: .005rem;
   font-size: 16px;
-  color: rgb(35,35,35);
   color: rgba(35,35,35,.8);
 }
 
@@ -239,45 +239,283 @@ main > aside:not(.spacer) {
 }
 
 .readtime {
-  font-size: 0.9em;
-  color: rgb(0,0,0);
+  font-size: 0.6em;
   color: rgba(0,0,0,0.4);
 }
+
+/* http://jonathannicol.com/blog/2014/06/16/centre-crop-thumbnails-with-css/ */
+.thumbnail {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
+}
+
 
 @media only screen and (max-width: 1024px) {
   main {
     -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   main .spacer {
     padding: 0;
     margin: 0;
     -webkit-flex: 0;
+    -ms-flex: 0;
     flex: 0;
   }
   main > aside {
     -webkit-flex: 0;
+    -ms-flex: 0;
     flex: 0;
   }
 }
 
 /* http://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 /* Smartphones (Portrait and landscape) ----------- */
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
 @media only screen
-and (min-width : 321px)
-and (max-width : 480px) {
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
   main {
-    -webkit-flex-direction: column;
-    flex-direction: column;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   main .spacer {
     padding: 0;
     margin: 0;
     -webkit-flex: 0;
+    -ms-flex: 0;
     flex: 0;
   }
   main > aside {
     -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  main {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+  main {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  main {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  main {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+  main {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+  main {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+  main {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+  main {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  main .spacer {
+    padding: 0;
+    margin: 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+  main > aside {
+    -webkit-flex: 0;
+    -ms-flex: 0;
     flex: 0;
   }
 }
@@ -288,16 +526,19 @@ and (min-width : 768px)
 and (max-width : 1024px) {
   main {
     -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   main .spacer {
     padding: 0;
     margin: 0;
     -webkit-flex: 0;
+    -ms-flex: 0;
     flex: 0;
   }
   main > aside {
     -webkit-flex: 0;
+    -ms-flex: 0;
     flex: 0;
   }
 }

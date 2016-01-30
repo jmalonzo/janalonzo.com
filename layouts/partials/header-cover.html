@@ -1,4 +1,4 @@
-{{ $baseurl := .Site.BaseUrl }}
+{{ $baseurl := .Site.BaseURL }}
 <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 {{ if isset .Params "thumbnail" }}
@@ -19,7 +19,7 @@
   <![endif]-->
   <link rel="dns-prefetch" href="{{ $baseurl }}"/>
   <link rel="next" href="{{ $baseurl }}/photos.html"/>
-  <link rel="icon" type="image/ico" href="{{ $baseurl }}/assets/favicon.ico"/>
+  <!--<link rel="icon" type="image/ico" href="{{ $baseurl }}/assets/favicon.ico"/>-->
   <link rel="canonical" href="{{ .Permalink }}">
   {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
   <script src="{{ $baseurl }}/js/ga.min.js"></script>

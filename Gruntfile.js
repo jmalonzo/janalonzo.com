@@ -287,14 +287,14 @@ module.exports = function(grunt) {
     'newer:copy:assets',
     'newer:copy:images',
     'responsive_images',
-    'webp',
-    'bpg'
+    'webp'
+//    'bpg'
   ]);
 
   grunt.registerTask('noimages', [
-    'newer:cssmin',
-    'newer:uglify',
-    'newer:copy:assets'
+    'cssmin',
+    'uglify',
+    'copy:assets'
   ]);
 
   grunt.registerTask('deploy', [

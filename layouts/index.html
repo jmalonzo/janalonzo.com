@@ -1,46 +1,43 @@
-{{ $baseurl := .Site.BaseUrl }}
-{{ partial "header-cover.html" . }}
+{{ partial "header-blog.html" . }}
 
-<div class="parallax">
+<nav class="navbar" role="navigation">
+  <ol class="breadcrumb">
+<!--    <li><a href="/index.html">Cover</a></li>-->
+    <li class="active"><a href="/index.html">{{ .Title }}</a></li>
+  </ol>
+</nav>
 
-  <div class="overview__cover parallax__group">
-<!--   <div class="parallax__layer parallax__layer--back">
-    </div>-->
-    <div class="overview__cover--content parallax__layer parallax__layer--base">
-      <nav class="navbar" role="navigation">
-        <ol class="breadcrumb">
-          <li><a href="/photos.html">Gallery</a></li>
-          <li><a href="/post.html">Notes</a></li>
-          <li class="active">{{ .Title }}</li>
-        </ol>
-      </nav>
-      <article>
-        <img src="{{ $baseurl }}/assets/profile.png" class="profile__photo"/>
-        <h1 class="cover-heading">Evolve solutions; when you find a good one, don't stop.</h1>
-        <p class="lead">
-          {{ with .Site.Params.Description}}{{.}}  {{ else }}A theme based on the pure css blog layout.{{end}}
-        </p>
-        <div class="social__buttons">
-          <a class="social__button" href="https://twitter.com/{{ .Site.Params.twitter }}">
-            <i class="fa fa-lg fa-twitter"></i>
-          </a>
-          <a class="social__button" href="https://github.com/{{.Site.Params.github }}">
-            <i class="fa fa-lg fa-github"></i>
-          </a>
-          <a class="social__button" href="https://google.com/{{.Site.Params.gplus }}">
-            <i class="fa fa-lg fa-google-plus"></i>
-          </a>
-          <a class="social__button" href="https://linkedin.com/in/{{.Site.Params.linkedin }}">
-            <i class="fa fa-lg fa-linkedin"></i>
-          </a>
-          <a class="social__button" href="https://facebook.com/{{.Site.Params.facebook }}">
-            <i class="fa fa-lg fa-facebook"></i>
-          </a>
-        </div> 
-      </div>
-      </article>
+<main role="main">
+  <aside class="spacer">&nbsp;</aside>
+  <div class="content">
+    <header>
+      <h1 class="title">{{ .Title }}</h1>
+      <p>random musings // <a href="https://twitter.com/jmalonzo">@jmalonzo</a></p>
+    </header>
+    {{ range .Data.Pages }}
+    <div class="entry" itemscope itemtype="http://schema.org/Article">
+        <header>
+            <h2 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <span class="datesection" itemprop="articleBody"><time>{{ .Date.Format "02 Jan 2006" }}</time> in {{ .Section }}</span>
+        </header>
+        {{ with .Params.thumbnail }}
+        <div class="thumbnail">
+            <img src="{{.}}"/>
+        </div>
+        {{ end }}
+        <p>{{ .Summary }}</p>
+        {{ if .Truncated }}
+        <p class="readtime"><a href="{{ .Permalink }}"><nobr>{{.ReadingTime}} min read →</nobr></a></p>
+        {{ end }}
     </div>
+    {{ end }}
   </div>
-</div>
-
-{{ partial "end-cover.html" . }}
+  <aside>
+    <div class="aside">
+      <h4>/me</h4>
+      <p>I'm a programmer and I ♡ tech, photography, & travel.</p>
+    </div>
+  </aside>
+</main>
+{{ partial "footer.html" . }}
+{{ partial "end.html" . }}

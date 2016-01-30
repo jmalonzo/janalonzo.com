@@ -2,30 +2,28 @@
 
 <nav class="navbar" role="navigation">
   <ol class="breadcrumb">
-    <li><a href="/index.html">Cover</a></li>
-    <li><a href="/post.html">Posts</a></li>
-    <li class="active">{{ .Title }}</li>
+    <li class="active"><a href="/index.html">{{ .Site.Title }}{{ .Title }}</a></li>
   </ol>
 </nav>
 
 <main>
-  <aside class="spacer">&nbsp;</aside>
-  <article>
-    <div itemscope itemtype="http://schema.org/Article">
-      <header>
-        <h1 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-        <time itemprop="articleBody">{{ .Date.Format "02 Jan 2006" }}</time>
-      </header>
-      {{ .Content }}
+    <aside class="spacer">&nbsp;</aside>
+    <div class="entry" itemscope itemtype="http://schema.org/Article">
+        <header>
+            <h1 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            <span class="datesection" itemprop="articleBody"><time>{{ .Date.Format "02 Jan 2006" }}</time> in {{ .Section }}</span>
+        </header>
+        {{ .Content }}
     </div>
 <!--      <nav>
       <ul class="pager">
+        <a class="btn btn-lg cc-btn-default{{if not .PrevInSection}} disabled{{end}}" href="{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}">Older</a>
+        <a class="btn btn-lg cc-btn-default{{if not .NextInSection}} disabled{{end}}" href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">Newer</a>
         {{ if .Prev }}<li><a href="{{ .Prev.Permalink }}">{{ .Prev.Title }}</a></li>{{ end }}
         {{ if .Next }}<li><a href="{{ .Next.Permalink }}">{{ .Next.Title }} →</a></li>{{ end }}
       </ul>
       </nav>
 -->
-  </article>
   <aside>
     <div class="aside">
       <h4>Gist</h4>

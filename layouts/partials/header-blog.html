@@ -1,4 +1,4 @@
-{{ $baseurl := .Site.BaseUrl }}
+{{ $baseurl := .Site.BaseURL }}
 <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 {{ if isset .Params "thumbnail" }}
@@ -18,11 +18,13 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="dns-prefetch" href="{{ $baseurl }}"/>
+  <link rel="preconnect" href="{{ $baseurl }}"/>
+  <link rel="prerender" href="{{ $baseurl }}/photos.html" as="html"/>
   <link rel="next" href="{{ $baseurl }}/photos.html"/>
-  <link rel="icon" type="image/ico" href="{{ $baseurl }}/assets/favicon.ico"/>
-  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}"/>
   {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
-  <script src="{{ $baseurl }}/js/ga.min.js"></script>
+  <link rel="preload" href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ $baseurl }}/css/blog.min.css"/>
+  <script src="{{ $baseurl }}/js/ga.min.js"></script>
 </head>
 <body>
