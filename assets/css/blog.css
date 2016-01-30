@@ -47,8 +47,8 @@ h4, h5, h6 {
    margin-bottom: 4px;
 }
 
-h1 { font-size: 36px; }
-h2 { font-size: 28px; }
+h1 { font-size: 28px; }
+h2 { font-size: 22px; }
 h3 { font-size: 18px; }
 
 blockquote {
@@ -111,7 +111,7 @@ nav > ol  {
 }
 
 main .content > header {
-  padding: 2em;
+  padding: 1.2em;
   padding-top: 20px;
   padding-bottom: 20px;
   color: rgba(0,0,0,0.6);
@@ -226,7 +226,7 @@ main > aside:not(.spacer) {
 .aside a, .aside p {
   line-height: 1.45;
   letter-spacing: .005rem;
-  font-size: 16px;
+  font-size: 13px;
   color: rgba(35,35,35,.8);
 }
 
@@ -241,6 +241,10 @@ main > aside:not(.spacer) {
 .readtime {
   font-size: 0.6em;
   color: rgba(0,0,0,0.4);
+}
+
+.aside__tags {
+    font-size: 13px;
 }
 
 /* http://jonathannicol.com/blog/2014/06/16/centre-crop-thumbnails-with-css/ */
