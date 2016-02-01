@@ -85,6 +85,7 @@ main {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  margin: 1.6em;
 }
 
 footer, footer a {
@@ -186,18 +187,12 @@ main > aside {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 2em;
-  padding: 2em;
+  margin-top: 1em;
+  padding: 1em;
 }
 
-main > .spacer {
-  -webkit-flex: 0 1 35em;
-  -ms-flex: 0 1 35em;
-  flex: 0 1 35em;
-}
-
-main > aside:not(.spacer) {
-    min-width: 10em;
+main > aside {
+    min-width: 12em;
 }
 
 .aside {
@@ -220,7 +215,7 @@ main > aside:not(.spacer) {
 }
 
 .aside p {
-  margin-bottom: 20px;
+  margin-bottom: 1em;
 }
 
 .aside a, .aside p {
@@ -271,19 +266,39 @@ main > aside:not(.spacer) {
   height: auto;
 }
 
+/** Button (Prev/Next) */
+.btn-group {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 1em;
+    padding: 0.8em;
+    border-radius: 6px;
+    border: 1px solid rgba(141,141,141,.2);
+    background-color: rgba(141,141,141,.2);
+    width: 4em;
+    text-align: center;
+}
+
+.btn.disabled {
+    background-color: #fff;
+}
+
+.btn.disabled a {
+    color: #ccc;
+    cursor: not-allowed;
+}
 
 @media only screen and (max-width: 1024px) {
   main {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+    flex-wrap: wrap;
   }
   main > aside {
     -webkit-flex: 0;
@@ -306,13 +321,7 @@ main > aside:not(.spacer) {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+    flex-wrap: wrap;
   }
   main > aside {
     -webkit-flex: 0;
@@ -331,13 +340,7 @@ main > aside:not(.spacer) {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+    flex-wrap: wrap;
   }
   main > aside {
     -webkit-flex: 0;
@@ -356,13 +359,6 @@ main > aside:not(.spacer) {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
   }
   main > aside {
     -webkit-flex: 0;
@@ -383,13 +379,7 @@ main > aside:not(.spacer) {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+    flex-wrap: wrap;
   }
   main > aside {
     -webkit-flex: 0;
@@ -408,13 +398,7 @@ main > aside:not(.spacer) {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+    flex-wrap: wrap;
   }
   main > aside {
     -webkit-flex: 0;
@@ -433,13 +417,7 @@ main > aside:not(.spacer) {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+
   }
   main > aside {
     -webkit-flex: 0;
@@ -459,13 +437,7 @@ main > aside:not(.spacer) {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+    flex-wrap: wrap;
   }
   main > aside {
     -webkit-flex: 0;
@@ -484,13 +456,7 @@ main > aside:not(.spacer) {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+    flex-wrap: wrap;
   }
   main > aside {
     -webkit-flex: 0;
@@ -510,13 +476,6 @@ main > aside:not(.spacer) {
     -ms-flex-direction: row;
     flex-direction: row;
   }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
-  }
   main > aside {
     -webkit-flex: 0;
     -ms-flex: 0;
@@ -532,13 +491,7 @@ and (max-width : 1024px) {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-  main .spacer {
-    padding: 0;
-    margin: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+    flex-wrap: wrap;
   }
   main > aside {
     -webkit-flex: 0;
