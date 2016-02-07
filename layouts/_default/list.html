@@ -1,32 +1,26 @@
-{{ partial "header.html" . }}
+{{ partial "header-blog.html" . }}
 <nav class="navbar" role="navigation">
-  <ol class="breadcrumb">
-    <li><a href="/index.html">Cover</a></li>
-    <li class="active">{{ .Title }}</li>
-  </ol>
+    <a href="/index.html">{{ .Site.Title }}</a>&nbsp; &middot; {{ .Title }}
 </nav>
 <main>
-  <ul class="photoset">
     {{ range .Data.Pages }}
-    <li class="photoset__item" itemscope itemtype="http://schema.org/Photograph">
-      {{ .Content }}
-      <div class="photoset__item--overlay">
-        <h4>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h4>
-        <p>
-          {{ .Date.Format "02 Jan 2006, 15:04" }}
-        </p>
-        <p>
-          {{ if isset .Params "categories" }}
-          {{ range .Params.categories }}
-          <a class="post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}.html">{{ . }}</a>
-          {{ end }}{{ end }}
-        </p>
-      </div>
-    </li>
+    <div class="entry">
+        <header>
+            <h1 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            <span class="datesection" itemprop="articleBody"><time>{{ .Date.Format "02 Jan 2006" }}</time></span>
+        </header>
+        {{ with .Params.thumbnail }}
+        <div class="thumbnail">
+            <img src="{{.}}"/>
+        </div>
+        {{ end }}
+        {{ with .Description }}<p>{{.}}</p>{{end}}
+        {{ with .Summary}}<p>{{.}}</p>{{end}}
+        {{ if .Truncated }}
+        <p class="readtime"><a href="{{ .Permalink }}"><nobr>{{.ReadingTime}} min read →</nobr></a></p>
+        {{ end }}
+    </div>
     {{ end }}
-  </ul>
 </main>
 {{ partial "footer.html" . }}
 {{ partial "end.html" . }}

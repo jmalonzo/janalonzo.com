@@ -1,47 +1,28 @@
 {{ partial "header-blog.html" . }}
 
 <nav class="navbar" role="navigation">
-  <ol class="breadcrumb">
-    <li><a href="/index.html">Cover</a></li>
-    <li class="active">{{ .Title }}</li>
-  </ol>
+    <a href="/index.html">{{ .Title }}</a>
 </nav>
 
 <main role="main">
-  <aside class="spacer">&nbsp;</aside>
   <div class="content">
     <header>
-      <h1 class="title">{{ .Site.Params.BlogTitle }}</h1>
-      <p>{{ .Site.Params.BlogDescription }}</p>
+      <h1 class="title">{{ .Title }}</h1>
+      <p>random musings // <a href="https://twitter.com/jmalonzo">@jmalonzo</a></p>
     </header>
     {{ range .Data.Pages }}
-    <article>
-      <div itemscope itemtype="http://schema.org/Article">
+    <div class="entry" itemscope itemtype="http://schema.org/Article">
         <header>
-          <h2 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <time itemprop="articleBody">{{ .Date.Format "02 Jan 2006" }}</time>
+            <h2 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <span class="datesection" itemprop="articleBody"><time>{{ .Date.Format "02 Jan 2006" }}</time> in {{ .Section }}</span>
         </header>
         <p>{{ .Summary }}</p>
-        <p class="readtime">
-          <a href="{{ .Permalink }}"><nobr>{{.ReadingTime}} min read →</nobr></a>
-        </p>
-      </div>
-    </article>
+        {{ if .Truncated }}
+        <p class="readtime"><a href="{{ .Permalink }}"><nobr>{{.ReadingTime}} min read →</nobr></a></p>
+        {{ end }}
+    </div>
     {{ end }}
   </div>
-  <aside>
-    <div class="aside">
-      <h4>/me</h4>
-      <p>Jan is a senior developer at <a href="http://www.taguchi.com.au">Taguchi</a>.
-        He occasionally takes pictures of landscapes and seascapes, mostly on weekends
-        with the <a href="http://www.focusphotographers.org">FOCUS landscape and seascape
-          Australia group</a>.
-      </p>
-      <p>
-        Views here are his own and not of his employer's.
-      </p>
-    </div>
-  </aside>
 </main>
 {{ partial "footer.html" . }}
 {{ partial "end.html" . }}

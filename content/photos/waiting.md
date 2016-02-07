@@ -1,9 +1,9 @@
 +++
 date = "2014-10-01T06:06:06+10:00"
 draft = false
-title = "waiting"
+title = "Waiting"
 categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Central Coast"]
-description = "Waiting for sunrise at Terrigal Haven"
+description = "A cloudy sunrise at Terrigal Haven, NSW"
 thumbnail = "//www.janalonzo.com/thumb/waiting-small.jpg"
 +++
 

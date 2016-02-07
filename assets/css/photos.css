@@ -3,23 +3,25 @@ body {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   -webkit-align-items: stretch;
   align-items: stretch;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: rgb(0,0,0);
-  font-family: Georgia, Cambria "Times New Roman", Times, serif;
+  background-color: rgb(255,255,255, 0.8);
+  font-family: 'Lora', sans-serif;
   min-height: 98vh;
 }
 
 nav {
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: right;
+  justify-content: right;
   margin: 0;
   padding: 0;
 }
@@ -28,24 +30,23 @@ main {
   display: -webkit-flex;
   display: flex;
   -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 
 footer, footer a {
-   color: rgb(119,119,119);
    color: rgba(119,119,119,.8);
    font-size: 0.8em;
    text-align: center;
 }
 
 a, a:hover {
-  color: rgb(119,119,119);
   color: rgba(119,119,119,.8);
   text-decoration: none;
 }
 
 figure, h2, p {
-  margin:0;
+  margin: 0.9em;
 }
 
 img {
@@ -53,33 +54,18 @@ img {
   image-rendering: auto;
 }
 
-ol.breadcrumb {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0.6em;
+.description {
+    font-weight: 300;
+    letter-spacing: -0.003em;
+    line-height: 1.58em;
+    font-size: 18px;
+    font-style: normal;
 }
 
-li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-.breadcrumb {
-   background-image: none;
-   background-color: rgb(0, 0, 0);
-   background-color: rgba(0, 0, 0, 0.8);
-}
-
-.breadcrumb>li+li:before {
-  color: rgb(119,119,119);
-  color: rgba(119,119,119,.8);
-  content: "\21e5\00a0";
-}
-
-.breadcrumb .active {
-  color: rgb(255,255,255);
-  color: rgba(255,255,255,.8);
+.datetaken {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(31,31,31, 0.6);
 }
 
 .photoset {
@@ -87,8 +73,10 @@ li {
    display: -webkit-flex;
    display: flex;
    -webkit-flex-wrap: wrap;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
    -webkit-flex-direction: row;
+   -ms-flex-direction: row;
    flex-direction: row;
    -webkit-align-items: stretch;
    align-items: stretch;
@@ -115,8 +103,10 @@ li {
    display: -webkit-flex;
    display: flex;
    -webkit-flex-wrap: nowrap;
+   -ms-flex-wrap: nowrap;
    flex-wrap: nowrap;
    -webkit-flex-direction: column;
+   -ms-flex-direction: column;
    flex-direction: column;
    -webkit-justify-content: center;
    justify-content: center;
@@ -128,8 +118,10 @@ li {
    display: -webkit-flex;
    display: flex;
    -webkit-flex-wrap: wrap;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
    -webkit-flex-direction: column;
+   -ms-flex-direction: column;
    flex-direction: column;
    -webkit-justify-content: flex-end;
    justify-content: flex-end;
@@ -140,7 +132,6 @@ li {
    position: absolute;
    top: 0; left: 0;
    /** */
-   color: rgb(170,170,170);
    color: rgba(170,170,170,0.8);
    font-size: 0.8em;
    text-transform: capitalize;
@@ -157,7 +148,6 @@ li {
 }
 
 .photoset a, .photoset a:active, .photoset a:hover {
-    color: rgb(170,170,170);
     color: rgba(170,170,170,0.8);
     text-decoration: none;
 }
@@ -171,6 +161,7 @@ li {
 @media only screen and (max-width : 320px) {
    .photoset {
       -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
       -webkit-justify-content: center;
       justify-content: center;

@@ -1,10 +1,10 @@
 +++
 categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beaches"]
 date = "2015-02-21T22:27:35+11:00"
-description = "An overflowing Narrabeen gorge"
+description = "An overflowing gorge in Narrabeen, NSW"
 draft = false
 thumbnail = "//janalonzo.com/thumb/narrabeen-small.jpg"
-title = "narrabeen"
+title = "Narrabeen"
 
 +++
 

@@ -1,9 +1,8 @@
 {
   "name": "janalonzo.com",
-  "version": "1.1.0",
+  "version": "2.1.0",
   "private": true,
   "devDependencies": {
-    "bower": "~1",
     "grunt": "~0",
     "grunt-aws": "^0",
     "grunt-bpg": "^0",
@@ -18,5 +17,10 @@
     "grunt-shell": "^1",
     "grunt-webp": "0",
     "load-grunt-tasks": "^3"
+  },
+  "dependencies": {
+    "font-awesome": "^4.5.0",
+    "picturefill": "^3.0.1",
+    "viewerjs": "^0.3.1"
   }
 }

@@ -1,9 +1,9 @@
 +++
 date = "2014-10-09T06:00:00+11:00"
 draft = false
-title = "paddy oysters"
+title = "Paddy Oysters"
 categories = ["Central Coast", "Australia", "Sydney", "Landscapes", "Seascapes"]
-description = "Paddy Oyster farm at Woy Woy, Central Coast"
+description = "The old Paddy Oyster farm at Woy Woy, NSW"
 thumbnail = "//www.janalonzo.com/thumb/paddy-oysters-small.jpg"
 +++
 

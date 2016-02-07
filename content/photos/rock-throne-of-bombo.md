@@ -1,9 +1,9 @@
 +++
 date = "2014-07-14T06:00:00+10:00"
 draft = false
-title = "rock throne of bombo"
+title = "Bombo Throne"
 categories = ["Sydney", "Australia", "Landscapes", "Seascapes"]
-description = "Bombo Quarry in the South Coast of NSW"
+description = "A rock throne at Bombo Quarry in the South Coast of NSW"
 thumbnail = "//www.janalonzo.com/thumb/rock-throne-of-bombo-small.jpg"
 +++
 

@@ -19,31 +19,51 @@ module.exports = function(grunt) {
       options: {
         report: 'min'
       },
-      default: {
+    default: {
         files: {
-          'static/css/site.min.css': [
-            'assets/css/site.css'
-          ],
-          'static/css/cover.min.css': [
-            'assets/css/cover.css'
+          'static/css/photos.min.css': [
+            'assets/css/photos.css'
           ],
           'static/css/blog.min.css': [
             'assets/css/blog.css'
+          ],
+          'static/css/vendor.min.css': [
+            'node_modules/viewerjs/dist/viewer.css',
+            'node_modules/font-awesome/css/font-awesome.css'
           ]
         }
       }
     },
     uglify: {
-      options: {
-          report: 'min'
-      },
-      default: {
-        files: {
-          'static/js/styles.min.js': [
-            'assets/js/styles.js'
-          ]
+        options: {
+            sourceMap: true,
+            sourceMapIncludeSources: true,
+            mangle: false,
+            screwIE8: true,
+            compress: {
+                sequences: true,
+                dead_code: true,
+                drop_debugger: true,
+                conditionals: true,
+                booleans: true,
+                loops: true,
+                unused: true,
+                if_return: true,
+                join_vars: true,
+                warnings: false
+            }
+        },
+        default: {
+            files: {
+                'static/js/vendor.min.js': [
+                    'node_modules/picturefill/dist/picturefill.js',
+                    'node_modules/viewerjs/dist/viewer.js'
+                ],
+                'static/js/site.min.js': [
+                    'assets/js/site.js'
+                ]
+            }
         }
-      }
     },
     copy: {
       options: {
@@ -101,16 +121,22 @@ module.exports = function(grunt) {
         newFilesOnly: false,
         sizes: [{
           name: 'xsmall',
-          width: 320
+          width: 320,
+          quality: 60
         },{
           name: 'small',
-          width: 640
+          width: 640,
+          quality: 60
+
         },{
           name: 'medium',
-          width: 1024
+          width: 1024,
+          quality: 70
+
         },{
           name: 'large',
-          width: 2048
+          width: 2048,
+          quality: 80
         }]
       },
       default: {

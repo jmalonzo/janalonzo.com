@@ -1,9 +1,9 @@
 +++
 date = "2014-06-30T06:06:06+10:00"
 draft = false
-title = "bangalley headland"
+title = "Bangalley"
 categories = ["Sydney", "Australia", "Northern Beaches", "Landscapes", "Seascapes"]
-description = "Bangalley Headland"
+description = "Stacked rocks at Bangalley headland, NSW"
 thumbnail = "//www.janalonzo.com/thumb/bangalley-headland-small.jpg"
 +++
 

@@ -1,42 +1,31 @@
 {{ partial "header-blog.html" . }}
-
 <nav class="navbar" role="navigation">
-  <ol class="breadcrumb">
-    <li class="active"><a href="/index.html">{{ .Site.Title }}{{ .Title }}</a></li>
-  </ol>
+    <a href="/index.html">{{ .Site.Title }}</a>&nbsp; &middot; {{ .Title }}
 </nav>
-
 <main>
     <div class="entry" itemscope itemtype="http://schema.org/Article">
         <header>
             <h1 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-            <span class="datesection" itemprop="articleBody"><time>{{ .Date.Format "02 Jan 2006" }}</time> in {{ .Section }}</span>
+            <span class="datesection" itemprop="articleBody"><time>{{ .Date.Format "02 Jan 2006" }}</time> &middot; {{ .ReadingTime }} min ({{ .FuzzyWordCount }} words)</span>
         </header>
+        <aside>
+            <div class="aside"><p>{{ .Description }}</p></div>
+        </aside>
         {{ .Content }}
-        <div class="btn-group">
+        <aside>
+            <div class="aside">
+                <ol class="aside__tags">
+                    {{ range .Params.categories }}
+                    <li><a href="/categories/{{ . | urlize }}.html">{{ . }}</a></li>
+                    {{ end }}
+                </ol>
+            </div>
+        </aside>
+<!--        <div class="btn-group">
             <span class="btn{{if not .PrevInSection}} disabled{{end}}"><a href="{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}">Previous</a></span>
             <span class="btn{{if not .NextInSection}} disabled{{end}}"><a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">Next</a></span>
         </div>
-    </div>
-  <aside>
-    <div class="aside">
-      <h4>Gist</h4>
-      <p>{{ .Description }}</p>
-      <p>Read in {{ .ReadingTime }} min / {{ .FuzzyWordCount }} words</p>
-    </div>
-    <div class="aside">
-      <h4>Tagged in</h4>
-      <ol class="aside__tags">
-        {{ range .Params.categories }}
-        <li>
-          <!--<a href="/categories/{{ . | urlize }}.html">-->
-            {{ . }}
-          <!--</a>-->
-        </li>
-        {{ end }}
-      </ol>
-    </div>
-  </aside>
+-->    </div>
 
 </main>
 

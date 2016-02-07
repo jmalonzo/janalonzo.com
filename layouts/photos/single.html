@@ -1,11 +1,15 @@
 {{ partial "header.html" . }}
 <nav class="navbar" role="navigation">
-  <ol class="breadcrumb">
-    <li class="active"><a href="/index.html">{{ .Title }}</a></li>
-  </ol>
+    <a href="/index.html">{{ .Site.Title }}</a>
 </nav>
 <main class="photoset__item--single" itemscope itemtype="http://schema.org/Photograph">
-  {{ .Content }}
+    <span class="description">
+        {{ .Title }} &middot; {{ .Description }}
+    </span>
+    <span class="datetaken">
+        <time>{{ .Date.Format "02 Jan 2006" }}</time>
+    </span>
+    {{ .Content }}
 </main>
 {{ partial "footer.html" . }}
 {{ partial "end.html" . }}

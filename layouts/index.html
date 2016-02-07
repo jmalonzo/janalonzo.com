@@ -1,10 +1,7 @@
 {{ partial "header-blog.html" . }}
 
 <nav class="navbar" role="navigation">
-  <ol class="breadcrumb">
-<!--    <li><a href="/index.html">Cover</a></li>-->
-    <li class="active"><a href="/index.html">{{ .Title }}</a></li>
-  </ol>
+    <a href="/index.html">{{ .Title }}</a>
 </nav>
 
 <main role="main">
@@ -24,19 +21,14 @@
             <img src="{{.}}"/>
         </div>
         {{ end }}
-        <p>{{ .Summary }}</p>
+        {{ with .Description }}<p class="thumbnail-description">{{.}}</p>{{end}}
+        {{ with .Summary}}<p>{{.}}</p>{{end}}
         {{ if .Truncated }}
         <p class="readtime"><a href="{{ .Permalink }}"><nobr>{{.ReadingTime}} min read →</nobr></a></p>
         {{ end }}
     </div>
     {{ end }}
   </div>
-  <aside>
-    <div class="aside">
-      <h4>/me</h4>
-      <p>I'm a programmer and I ♡ tech, photography, & travel.</p>
-    </div>
-  </aside>
 </main>
 {{ partial "footer.html" . }}
 {{ partial "end.html" . }}
