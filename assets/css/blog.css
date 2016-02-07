@@ -185,6 +185,11 @@ main .entry p a:active {
    text-decoration: underline;
 }
 
+main .entry ol {
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
 main > aside {
   display: -webkit-flex;
   display: flex;
