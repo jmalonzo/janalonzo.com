@@ -3,7 +3,7 @@ categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beache
 date = "2015-02-21T22:27:35+11:00"
 description = "An overflowing gorge in Narrabeen, NSW"
 draft = false
-thumbnail = "//janalonzo.com/thumb/narrabeen-small.jpg"
+thumbnail = "//janalonzo.com/thumb/narrabeen-xsmall.jpg"
 title = "Narrabeen"
 
 +++

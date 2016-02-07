@@ -14,7 +14,7 @@
     <div class="entry" itemscope itemtype="http://schema.org/Article">
         <header>
             <h2 itemprop="name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            <span class="datesection" itemprop="articleBody"><time>{{ .Date.Format "02 Jan 2006" }}</time> in {{ .Section }}</span>
+            <span class="datesection" itemprop="articleBody"><time>{{ .Date.Format "02 Jan 2006" }}</time></span>
         </header>
         {{ with .Params.thumbnail }}
         <div class="thumbnail">

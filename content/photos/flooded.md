@@ -3,7 +3,7 @@ categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beache
 date = "2015-01-31T22:29:29+11:00"
 description = "The Mona Vale pool flooded at high tide"
 draft = false
-thumbnail = "//janalonzo.com/thumb/flooded-small.jpg"
+thumbnail = "//janalonzo.com/thumb/flooded-xsmall.jpg"
 title = "Flooded"
 
 +++

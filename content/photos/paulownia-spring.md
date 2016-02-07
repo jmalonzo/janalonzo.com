@@ -4,7 +4,7 @@ draft = false
 title = "Paulownia Spring"
 categories = ["Richmond", "Australia", "South Coast", "Nature"]
 description = "Trees at Paulownia Plantations during Sprint season"
-thumbnail = "//www.janalonzo.com/thumb/paulownia-spring-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/paulownia-spring-xsmall.jpg"
 +++
 
 {{% img srcname="/thumb/paulownia-spring" title="Paulownia plantations at Richmond in spring time" %}}

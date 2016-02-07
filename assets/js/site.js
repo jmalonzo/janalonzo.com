@@ -10,9 +10,8 @@
                 minZoomRatio: 0.5,
                 maxZoomRatio: 2,
                 toolbar: 4,
-                viewed: function () {
-                    // All methods are available here except "show".
-                    this.viewer.zoomTo(1); //.rotateTo(180);
+                url: function() {
+                    return event.target.src.replace("xsmall", "large");
                 }
             });
         }, false);

@@ -3,7 +3,7 @@ categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beache
 date = "2015-02-07T22:27:46+11:00"
 description = "A fisherman awaits a fish while a storm passes by"
 draft = false
-thumbnail = "//janalonzo.com/thumb/reachout-small.jpg"
+thumbnail = "//janalonzo.com/thumb/reachout-xsmall.jpg"
 title = "Reachout"
 
 +++

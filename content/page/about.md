@@ -2,7 +2,7 @@
 date = "2014-10-19T14:08:00+11:00"
 draft = true
 title = "about"
-thumbnail = "/assets/about.jpg"
+thumbnail = "/assets/profile.jpg"
 +++
 
 I have always

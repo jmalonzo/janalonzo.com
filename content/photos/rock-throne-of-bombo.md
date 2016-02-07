@@ -4,7 +4,7 @@ draft = false
 title = "Bombo Throne"
 categories = ["Sydney", "Australia", "Landscapes", "Seascapes"]
 description = "A rock throne at Bombo Quarry in the South Coast of NSW"
-thumbnail = "//www.janalonzo.com/thumb/rock-throne-of-bombo-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/rock-throne-of-bombo-xsmall.jpg"
 +++
 
 {{% img srcname="/thumb/rock-throne-of-bombo" title="Sunrise at Bombo Quarry, Kiama, NSW" %}}

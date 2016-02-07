@@ -3,7 +3,7 @@ categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beache
 date = "2014-11-16T11:47:24+11:00"
 description = "Excess water overflowing at the pool in Nth Curl Curl Beach, NSW"
 draft = false
-thumbnail = "//www.janalonzo.com/thumb/excess-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/excess-xsmall.jpg"
 title = "Excess"
 +++
 

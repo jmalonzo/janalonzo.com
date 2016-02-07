@@ -95,11 +95,6 @@ footer, footer a {
   text-align: center;
 }
 
-.aside__tags > li {
-  display: inline-block;
-  list-style-type: none;
-}
-
 .aside__tags {
     padding: 0;
     font-style: normal;
@@ -107,6 +102,8 @@ footer, footer a {
 }
 
 .aside__tags > li {
+    display: inline-block;
+    list-style-type: none;
     padding-right: 1em;
     padding-left: 1em;
     background: #efefef;
@@ -114,6 +111,7 @@ footer, footer a {
     line-height: 22px;
     padding-top: 0.4em;
     padding-bottom: 0.4em;
+    margin-right: 0.8em;
 }
 
 main .content > header {
@@ -236,7 +234,7 @@ main > aside {
 }
 
 /* http://jonathannicol.com/blog/2014/06/16/centre-crop-thumbnails-with-css/ */
-.thumbnail {
+/*.thumbnail {
   position: relative;
   width: 300px;
   height: 300px;
@@ -258,7 +256,7 @@ main > aside {
   width: 100%;
   height: auto;
 }
-
+*/
 .thumbnail-description {
     font-style: italic;
     color: rgba(0,0,0,0.6);
@@ -405,7 +403,7 @@ main > aside {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-
+    flex-wrap: wrap;
   }
   main .entry {
       width: 100%;

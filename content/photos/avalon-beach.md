@@ -3,7 +3,7 @@ categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beache
 date = "2014-11-23T16:39:52+11:00"
 description = "Little rocks at Avalon beach, NSW"
 draft = false
-thumbnail = "//www.janalonzo.com/thumb/avalon-beach-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/avalon-beach-xsmall.jpg"
 title = "Avalon Beach"
 
 +++

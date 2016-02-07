@@ -4,7 +4,7 @@ draft = false
 title = "Bangalley"
 categories = ["Sydney", "Australia", "Northern Beaches", "Landscapes", "Seascapes"]
 description = "Stacked rocks at Bangalley headland, NSW"
-thumbnail = "//www.janalonzo.com/thumb/bangalley-headland-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/bangalley-headland-xsmall.jpg"
 +++
 
 {{% img srcname="/thumb/bangalley-headland" title="Rock formations at Bangalley Headland" %}}

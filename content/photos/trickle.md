@@ -3,7 +3,7 @@ categories = ["Sydney", "Australia", "Landscapes", "Seascapes", "Northern Beache
 date = "2014-11-30T06:52:15+11:00"
 description = "Trickling flow at Turrimetta Beach, NSW"
 draft = false
-thumbnail = "//www.janalonzo.com/thumb/trickle-small.jpg"
+thumbnail = "//www.janalonzo.com/thumb/trickle-xsmall.jpg"
 title = "Trickle"
 +++
 
