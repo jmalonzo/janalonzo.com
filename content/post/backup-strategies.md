@@ -7,10 +7,8 @@ title = "Photo Backups"
 
 +++
 
-## Overview
-
 Losing important photos of kids and family, or even a wedding job, can be heartbreaking. We’ve all been there and that is why I made a point to backup all my important files externally and, if possible, off-site. In this article we will cover some backup essentials and the different options on how to backup your photos to an external drive or a network-attached storage (NAS), and to a remote backup site.
-
+<!--more-->
 ## What to Backup?
 
 As photographers we usually have capture and ingestion workflows, and that’s something that we get to talk more about. But what’s also important is your backup workflow. All that hard-work of taking the shot will come undone without a good backup workflow. What’s a good backup workflow? Preferably one that backs up all your photography artifacts, mainly:
