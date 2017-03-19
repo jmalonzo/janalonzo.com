@@ -10,7 +10,7 @@
     "clean": "rm -rf public static build tmp",
     "html-minifier": "html-minifier --remove-comments --collapse-whitespace --input-dir public",
     "copy-assets": "cp assets/* public/",
-    "build": "npm run clean && hugo --theme hugo-theme-blueberry-detox && npm run copy-assets",
+    "build": "npm run clean && hugo --uglyURLs='true' --theme hugo-theme-blueberry-detox && npm run copy-assets",
     "start": "hugo server --config config.dev.toml --buildDrafts --theme hugo-theme-blueberry-detox"
   }
 }

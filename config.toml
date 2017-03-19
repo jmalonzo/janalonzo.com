@@ -3,6 +3,8 @@ languageCode = "en-us"
 canonifyurls = true
 title = "/public/"
 
+googleAnalytics = "UA-594998-17"
+
 [indexes]
     category = "categories"
     tag = "tags"
@@ -11,3 +13,4 @@ title = "/public/"
     Author = "Jan Alonzo"
     Tagline = ""
     Description = "RANDOM INCONSEQUENTIAL MUSINGS"
+    google_analytics = "UA-594998-17"
