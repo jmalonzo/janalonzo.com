@@ -1,0 +1,13 @@
+baseurl = "http://localhost:1313"
+languageCode = "en-us"
+canonifyurls = true
+title = "/public/"
+
+[indexes]
+    category = "categories"
+    tag = "tags"
+
+[Params]
+    Author = "Jan Alonzo"
+    Tagline = ""
+    Description = "RANDOM INCONSEQUENTIAL MUSINGS"

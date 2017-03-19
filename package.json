@@ -1,26 +1,16 @@
 {
   "name": "janalonzo.com",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "private": true,
   "devDependencies": {
-    "grunt": "~0",
-    "grunt-aws": "^0",
-    "grunt-bpg": "^0",
-    "grunt-contrib-clean": "0",
-    "grunt-contrib-copy": "^0",
-    "grunt-contrib-cssmin": "0",
-    "grunt-contrib-htmlmin": "^0",
-    "grunt-contrib-uglify": "^0",
-    "grunt-contrib-watch": "^0",
-    "grunt-newer": "^1",
-    "grunt-responsive-images": "^0",
-    "grunt-shell": "^1",
-    "grunt-webp": "0",
-    "load-grunt-tasks": "^3"
+    "html-minifier": "^3.4.1"
   },
-  "dependencies": {
-    "font-awesome": "^4.5.0",
-    "picturefill": "^3.0.1",
-    "viewerjs": "^0.3.1"
+  "dependencies": {},
+  "scripts": {
+    "clean": "rm -rf public static build tmp",
+    "html-minifier": "html-minifier --remove-comments --collapse-whitespace --input-dir public",
+    "copy-assets": "cp assets/* public/",
+    "build": "npm run clean && hugo --theme hugo-theme-blueberry-detox && npm run copy-assets",
+    "start": "hugo server --buildDrafts --theme hugo-theme-blueberry-detox"
   }
 }
