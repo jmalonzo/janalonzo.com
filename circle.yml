@@ -3,7 +3,8 @@ machine:
     version: 7
 checkout:
   post:
-    - git submodule update --remote themes/hugo-theme-blueberry-detox
+    - git submodule sync
+    - git submodule update --init
 dependencies:
   pre:
     - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
