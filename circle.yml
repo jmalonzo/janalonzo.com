@@ -19,4 +19,5 @@ deployment:
     branch: master
     commands:
       - aws s3 sync public s3://janalonzo.com/ --delete
+      - aws configure set preview.cloudfront true
       - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html /index.xml
