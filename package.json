@@ -11,6 +11,6 @@
     "html-minifier": "html-minifier --remove-comments --collapse-whitespace --input-dir public",
     "copy-assets": "cp assets/* public/",
     "build": "npm run clean && hugo --theme hugo-theme-blueberry-detox && npm run copy-assets",
-    "start": "hugo server --buildDrafts --theme hugo-theme-blueberry-detox"
+    "start": "hugo server --config config.dev.toml --buildDrafts --theme hugo-theme-blueberry-detox"
   }
 }

@@ -1,4 +1,4 @@
-baseurl = "https://www.janalonzo.com"
+baseurl = "https://www.janalonzo.com/"
 languageCode = "en-us"
 canonifyurls = true
 title = "/public/"

@@ -1,0 +1,20 @@
+machine:
+  node:
+    version: 7
+checkout:
+  post:
+    - git submodule update --remote themes/hugo-theme-blueberry-detox
+dependencies:
+  pre:
+    - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
+    - sudo dpkg -i hugo*.deb
+  override:
+    - yarn
+compile:
+  override:
+    - npm run build
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync public s3://janalonzo.com/ --delete
