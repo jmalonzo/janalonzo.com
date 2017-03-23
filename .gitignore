@@ -1,6 +1,2 @@
 public/
-static/
-build/
 node_modules
-tmp/
-credentials.json
