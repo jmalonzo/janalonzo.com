@@ -1,7 +1,7 @@
 +++
 date = "2017-04-05T19:26:39+10:00"
 description = "Goog's canary release engineering"
-categories = ["Tech", "Release Engineering", "Bookmarks]
+categories = ["Tech", "Release Engineering", "Bookmarks"]
 title = "Google Canaries"
 draft = false
 +++
