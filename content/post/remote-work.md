@@ -9,7 +9,7 @@ title = "Remote Work — Staying Focused"
 
 There are a lot of very good articles about remote work floating on the web so
 I will try not repeat them here. In this post I will highlight some of the things
-that I thought were left-out by articles about remote work that I've read on the web,
+that I thought were left-out by those articles about remote work,
 and highlight some of the things that I generally do to be productive.
 
 ## Setup

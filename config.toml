@@ -1,7 +1,9 @@
 baseurl = "https://www.janalonzo.com/"
 languageCode = "en-us"
 canonifyurls = true
-title = "/public/"
+title = "/public"
+author = "jmalonzo"
+copyright = "2017 Jan Alonzo. All Rights Reserved."
 
 googleAnalytics = "UA-594998-17"
 
@@ -9,8 +11,9 @@ googleAnalytics = "UA-594998-17"
     category = "categories"
     tag = "tags"
 
-[Params]
-    Author = "Jan Alonzo"
-    Tagline = ""
-    Description = "RANDOM INCONSEQUENTIAL MUSINGS"
-    google_analytics = "UA-594998-17"
+[params]
+  logo      = "https://avatars2.githubusercontent.com/u/12141?v=3&u=832a05acdf956d9a9f0449908c9db64638ad7448&s=400"
+  twitter   = "https://twitter.com/jmalonzo"
+  facebook  = "https://www.facebook.com/jmalonzo"
+  github    = "https://github.com/jmalonzo"
+  email     = "jmalonzo@gmail.com"
