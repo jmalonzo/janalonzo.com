@@ -1,10 +1,6 @@
 machine:
   node:
-    version: 7
-checkout:
-  post:
-    - git submodule sync
-    - git submodule update --init
+    version: 8
 dependencies:
   pre:
     - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
