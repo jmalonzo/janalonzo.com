@@ -3,7 +3,7 @@ machine:
     version: 8
 dependencies:
   pre:
-    - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.23/hugo_0.23_Linux-64bit.deb
     - sudo dpkg -i hugo*.deb
   override:
     - yarn
