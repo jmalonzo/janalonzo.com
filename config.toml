@@ -1,19 +1,24 @@
 baseurl = "https://www.janalonzo.com/"
-languageCode = "en-us"
+languagecode = "en-US"
 canonifyurls = true
 title = "/public"
-author = "jmalonzo"
-copyright = "2017 Jan Alonzo. All Rights Reserved."
-
-googleAnalytics = "UA-594998-17"
+author = "Jan"
+pygmentsstyle       = "bw"
+pygmentscodefences  = true
 
 [indexes]
     category = "categories"
     tag = "tags"
 
 [params]
-  logo      = "https://avatars2.githubusercontent.com/u/12141?v=3&u=832a05acdf956d9a9f0449908c9db64638ad7448&s=400"
-  twitter   = "https://twitter.com/jmalonzo"
-  facebook  = "https://www.facebook.com/jmalonzo"
-  github    = "https://github.com/jmalonzo"
-  email     = "jmalonzo@gmail.com"
+  sitename = "/public"
+
+[[menu.main]]
+    name = "Twitter"
+    url  = "https://twitter.com/jmalonzo"
+[[menu.main]]
+    name = "Github"
+    url  = "https://github.com/jmalonzo"
+[[menu.main]]
+    name = "LinkedIn"
+    url  = "https://linkedin.com/in/jmalonzo"

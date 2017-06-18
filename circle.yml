@@ -1,6 +1,10 @@
 machine:
   node:
     version: 8
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
 dependencies:
   pre:
     - wget https://github.com/gohugoio/hugo/releases/download/v0.23/hugo_0.23_Linux-64bit.deb
@@ -14,6 +18,6 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync public s3://janalonzo.com/
+      - aws s3 sync public s3://janalonzo.com/ --delete
       - aws configure set preview.cloudfront true
       - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html /index.xml
