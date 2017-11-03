@@ -1,8 +1,9 @@
 +++
 draft = true
-title = "Title here"
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
 categories = ["Tech"]
 description = "Content here"
+date = {{ .Date }}
 +++
 
 Blah
