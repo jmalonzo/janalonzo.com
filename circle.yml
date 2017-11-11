@@ -7,7 +7,7 @@ checkout:
     - git submodule update --init
 dependencies:
   pre:
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.23/hugo_0.23_Linux-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.30.2/hugo_0.30.2_Linux-64bit.deb
     - sudo dpkg -i hugo*.deb
   override:
     - yarn
