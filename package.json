@@ -1,6 +1,6 @@
 {
   "name": "janalonzo.com",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "private": true,
   "devDependencies": {
     "html-minifier": "^3.5.2"
@@ -10,7 +10,7 @@
     "clean": "rm -rf public static build tmp",
     "html-minifier": "html-minifier --remove-comments --collapse-whitespace --input-dir public",
     "copy-assets": "cp assets/* public/",
-    "build": "npm run clean && hugo --uglyURLs='true' --theme black-and-light --verbose && npm run copy-assets",
-    "start": "hugo server --config config.dev.toml --buildDrafts --theme black-and-light --verbose"
+    "build": "npm run clean && hugo --uglyURLs='true' --theme sublime-hugo-theme --verbose && npm run copy-assets",
+    "start": "hugo server --config config.dev.toml --buildDrafts --theme sublime-hugo-theme --verbose"
   }
 }

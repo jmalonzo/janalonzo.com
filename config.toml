@@ -3,22 +3,29 @@ languagecode = "en-US"
 canonifyurls = true
 title = "/public"
 author = "Jan"
-pygmentsstyle       = "bw"
-pygmentscodefences  = true
+googleAnalytics = ""
 
 [indexes]
     category = "categories"
     tag = "tags"
 
 [params]
-  sitename = "/public"
+  name = "/public"
+  description = ""
+  copyright = "&copy; 2017 Jan Alonzo"
 
-[[menu.main]]
-    name = "Twitter"
-    url  = "https://twitter.com/jmalonzo"
-[[menu.main]]
-    name = "Github"
-    url  = "https://github.com/jmalonzo"
-[[menu.main]]
-    name = "LinkedIn"
-    url  = "https://linkedin.com/in/jmalonzo"
+[params.offcanvas]
+    # Menu items
+    title = "Jan Alonzo"
+    bio = "Sydney NSW"
+    bio2 = "Australia"
+    subscribe = "Subscribe"
+    followme = "Contact"
+
+    # Enable Google search
+    search_enabled = true
+    search = "Search"
+
+    [[params.offcanvas.socialnetworks]]
+        name = "jmalonzo [at] gmail"
+        url = "mailto:jmalonzo@gmail.com"
