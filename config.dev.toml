@@ -12,6 +12,9 @@ author = "Jan"
   name = "/public"
   description = ""
   copyright = "&copy; 2017 Jan Alonzo"
+ 
+  pageNotFoundTitle = "Where could it be?"
+  pageNotFoundSubtitle = "I wish that page exists, sorry. <br> Page not found."
 
 [params.offcanvas]
     # Menu items
