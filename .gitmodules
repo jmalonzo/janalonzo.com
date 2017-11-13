@@ -1,0 +1,3 @@
+[submodule "sublime-hugo-theme-gitssh"]
+	path = themes/sublime-hugo-theme
+	url = git@github.com:jmalonzo/sublime-hugo-theme.git
