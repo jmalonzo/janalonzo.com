@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/jmalonzo
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://janalonzo.com
+  * I am jmalonzo (https://keybase.io/jmalonzo) on keybase.
+  * I have a public key with fingerprint 154A 1731 7226 5926 6F05  BBAB 15B9 23C8 AD61 224D
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010124534fe2d9ccd943a9e3dea1f68e6349db5e5d9c2ae94a1b63ee48cdf454cca90a",
+      "fingerprint": "154a1731722659266f05bbab15b923c8ad61224d",
+      "host": "keybase.io",
+      "key_id": "15b923c8ad61224d",
+      "kid": "010124534fe2d9ccd943a9e3dea1f68e6349db5e5d9c2ae94a1b63ee48cdf454cca90a",
+      "uid": "e0f3af30a8225c3ce28cf2a1e0837a19",
+      "username": "jmalonzo"
+    },
+    "service": {
+      "hostname": "janalonzo.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1516938870,
+  "expire_in": 157680000,
+  "prev": "48afc3c2df729617d910fadffa7a3fdfe0e61cf96c7bc74b06e51b33c4330283",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtkllIVFEYx0dNRMGotDHIoO6DUUnec89dh8oKFKKIHtrMajir3kbvnWbGKXOB
+HloMkjJogcqI0LIMMtrElDDBip6smOohWh5GqAwq25dzLd967Lwczvf9/v/zfR/f
+gew0X1bK6OQQXZ1eciLl3jD2bdjS1lAnYZfWSoE6KcTGLlZFWTQWDNlUCkgykIGi
+alDlTKEWIdRSIbIYpAwBrptMh6pFscY0kVQQs1QEsA4ZU01CuaqphCBLRlKhxG2n
+gkXCEduJCVugCdCAwFAUXbMUXeeyhjHCQMOWAomJqA4URaVCWOlGPYUoDqMom2+7
+IiYewbHy/sH/57prxuyYzCHiUEamomgEEqaYhCsIMNmEBgKWB0ZZxEHVTNBbqlGV
+6+xwpYZCSUTjNmHeYL1Oxgnk/EHmE7daiMMRN+YSt0qkKmOxcDTgSWO1YY/dxnDw
+r0sQ2w4VgxSKOItEbdeRAkCQJGZ7tkADugVN05ALJbY9bEdY0PYIzdBNWRzvHxYX
+lqqJOIFlRKHcUCwdGNQCMkeUc2QgyClnMtMB4ZZODEwMFcs60wCGkKgQyooJJa+x
+rY4rBVRRJ6oQnlG7wkGxmgiTGrKaUuAEX0qWb4Z/1gRf/+3jeQ/9GYH8J4/Gly89
+1ds8X1bmpPFI7ruMXxuHp6+Pf6UTk/5pl1qaYO/mAX/fixlt9aXh/Z9LZ148OKDv
+f371TuOChW9mdR0+/XWg4+bd11eWz8OnWLZ+fe1w+8udze97L5fD0QfBbnmk/Fmw
+uGgD3rW77f3UJ3fqk+tW2iTRe6QVLy4DHde+H2nPH6zZk5jzfMqi+wX+QHptS8+m
+2rNHu6XElewvyYLprSPl/bMbLzw92Br/MTcU70zddgsG+g7fzlm6I63o43k+9HNo
+aElP9r3it/Y3dGNJycm8tMxXzaGB4N7mSU/XlKcnjiUPFZT1FVz+MNp1smXfYzBl
+WV9D5qoVdTmDnRxHis6055z79Pbs3ar6ttyujuNl3b8u/gY=
+=aZnn
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jmalonzo
+
+==================================================================
+
