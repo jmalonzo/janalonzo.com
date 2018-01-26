@@ -1,33 +1,33 @@
 baseurl = "http://localhost:1313"
 languagecode = "en-US"
 canonifyurls = true
-title = "/public"
-author = "Jan"
+title = "b-log"
+
+pygmentsstyle = "emacs"
+Paginate = 5
+SectionPagesMenu = "main"
 
 [indexes]
     category = "categories"
     tag = "tags"
 
 [params]
-  name = "/public"
-  description = ""
-  copyright = "&copy; 2017 Jan Alonzo"
- 
-  pageNotFoundTitle = "Where could it be?"
-  pageNotFoundSubtitle = "I wish that page exists, sorry. <br> Page not found."
+  description = "My thoughts and musings"
+  copyright = "&copy; 2018 Jan Alonzo"
+  ShowCopyright = true
+	RSSEnabled = true
+  RSSSections = [ "Post" ]
 
-[params.offcanvas]
-    # Menu items
-    title = "Jan Alonzo"
-    bio = "Sydney NSW"
-    bio2 = "Australia"
-    subscribe = "Subscribe"
-    followme = "Contact"
+[author]
+  Handle = "jmalonzo"
+  FirstName = "Jan"
+  LastName = "Alonzo"
+  AboutPage = "https://keybase.io/jmalonzo"
+  Location = "Sydney, Australia"
+  FlickrID = "52265670@N00"
 
-    # Enable Google search
-    search_enabled = true
-    search = "Search"
-
-    [[params.offcanvas.socialnetworks]]
-        name = "jmalonzo [at] gmail"
-        url = "mailto:jmalonzo@gmail.com"
+[[menu.main]]
+  name = "Post"
+  weight = 1
+  identifier = "post"
+  url = "/post/"
