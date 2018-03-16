@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:9
+    steps:
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
+      - run: wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb
+      - run: sudo dpkg -i hugo*.deb
+      - run: pip install awscli --upgrade --user
+      - run:
+          name: install dependencies
+          command: yarn
+      - run:
+          name: build site
+          command: npm run build
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          command: |
+            aws s3 sync public s3://janalonzo.com/ --delete
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html /index.xml
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
