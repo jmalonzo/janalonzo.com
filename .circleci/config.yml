@@ -18,13 +18,13 @@ jobs:
           name: "Build Our Statically Generated Docs Website with Hugo"
           command: HUGO_ENV=production npm run build
       - persist_to_workspace:
-          root: /root/project
+          root: ~/project
           paths: public/
   deploy:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: /root/project
+          at: ~/project
       - run:
           name: Sync to S3
           command: aws s3 sync public s3://janalonzo.com/ --delete
