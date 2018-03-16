@@ -25,6 +25,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
+      - run: sudo apt-get -y -qq install awscli
       - run:
           name: Sync to S3
           command: aws s3 sync public s3://janalonzo.com/ --delete
