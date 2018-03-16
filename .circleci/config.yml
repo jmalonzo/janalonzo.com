@@ -1,39 +1,30 @@
+# .circleci/config.yml
+defaults: &defaults
+  docker:
+    - image: felicianotech/docker-hugo:0.27.1
+  working_directory: ~/project
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/node:9
+    <<: *defaults
     steps:
       - checkout
       - run: git submodule sync
       - run: git submodule update --init
-      - run: wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.deb
-      - run: sudo dpkg -i hugo*.deb
-#      - run: pip install awscli --upgrade --user
+      - run: yarn
       - run:
-          name: install dependencies
-          command: yarn
-      - run:
-          name: build site
-          command: npm run build
+          name: "Build Our Statically Generated Docs Website with Hugo"
+          command: HUGO_ENV=production npm run build
+      - persist_to_workspace:
+          root: /root/project
+          paths: public/
   deploy:
-    machine:
-      enabled: true
+    <<: *defaults
     steps:
+      - attach_workspace:
+          at: /root/project
       - run:
           name: Sync to S3
           command: aws s3 sync public s3://janalonzo.com/ --delete
       - run: aws configure set preview.cloudfront true
       - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html /index.xml
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
-
