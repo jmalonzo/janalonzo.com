@@ -26,9 +26,6 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run:
-          name: Make Composer executables available globally
-          command: |
-      - run:
           name: Install awscli
           command: |
             sudo apt-get -y -qq update
