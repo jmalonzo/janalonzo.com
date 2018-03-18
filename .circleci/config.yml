@@ -32,8 +32,7 @@ jobs:
             sudo apt-get -y -qq install python3.4-dev
             curl -O https://bootstrap.pypa.io/get-pip.py
             python3.4 get-pip.py --user
-            echo 'export PATH=$HOME/.local/bin:$PATH' >> $BASH_ENV
-            source /home/circleci/.bashrc
+            export PATH=$HOME/.local/bin:$PATH
             pip install awscli --upgrade --user
       - run:
           name: Sync to S3
