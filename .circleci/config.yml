@@ -34,11 +34,9 @@ jobs:
             python3.4 get-pip.py --user
             export PATH=$HOME/.local/bin:$PATH
             pip install awscli --upgrade --user
-      - run:
-          name: Sync to S3
-          command: aws s3 sync public s3://janalonzo.com/ --delete
-      - run: aws configure set preview.cloudfront true
-      - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html /index.xml
+            aws s3 sync public s3://janalonzo.com/ --delete
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html /index.xml
 workflows:
   version: 2
   build-deploy:
