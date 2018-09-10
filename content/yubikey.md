@@ -1,10 +1,12 @@
-+++
-categories = ["Tech", "Security"]
-date = "2015-04-28T11:17:28+10:00"
-description = "Some notes on improving security with the use of Yubico's Yubikey."
-draft = false
-title = "Yubikey"
-+++
+---
+categories: ["Tech", "Security"]
+date: "2015-04-28T11:17:28+10:00"
+description: "Some notes on improving security with the use of Yubico's Yubikey."
+draft: false
+title: "Yubikey"
+---
+
+# Yubikey
 
 I've been reading a lot of cyber-thriller novels recently,
 particularly the ones that involve security, malware, and cyber
@@ -39,7 +41,7 @@ ones, and the ones that I've implemented/executed thus far.
 
 ## Keystore
 
-As a PGP/GnuPG and SSH keystore, I've followed [this excellent article](https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/). 
+As a PGP/GnuPG and SSH keystore, I've followed [this excellent article](https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/).
 In fact, that will take you a long way in maximising your Yubikey
 especially if you use GPG and SSH in your day-to-day tasks (I do as a developer).
 

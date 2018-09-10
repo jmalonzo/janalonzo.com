@@ -1,11 +1,12 @@
-+++
-categories = ["Tech", "Innovation", "Apple", "Tesla"]
-date = "2016-01-23T09:00:00+11:00"
-description = "Thoughts on Steve Jobs' passion for integrated UX"
-draft = false
-title = "Integrated Products"
+---
+categories: ["Tech", "Innovation", "Apple", "Tesla"]
+date: "2016-01-23T09:00:00+11:00"
+description: "Thoughts on Steve Jobs' passion for integrated UX"
+draft: false
+title: "Integrated Products"
+---
 
-+++
+# Integrated Products
 
 *This post first appeared in a <a href="https://medium.com/@jmalonzo/integrated-products-78349529c0fe">Medium article.</a>*
 

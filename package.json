@@ -3,14 +3,14 @@
   "version": "3.3.0",
   "private": true,
   "devDependencies": {
-    "html-minifier": "^3.5.2"
+    "vuepress": "^0.14.2"
   },
   "dependencies": {},
   "scripts": {
-    "clean": "rm -rf public static build tmp",
+    "clean": "rm -rf public static build tmp dist",
     "html-minifier": "html-minifier --remove-comments --collapse-whitespace --input-dir public",
     "copy-assets": "cp assets/* public/",
-    "build": "npm run clean && hugo --verbose && npm run copy-assets",
-    "start": "hugo server --config config.dev.toml --buildDrafts --verbose"
+    "build": "npm run clean && vuepress build content",
+    "start": "vuepress dev content"
   }
 }

@@ -1,10 +1,11 @@
-+++
-draft = false
-title = "Why use local component registrations in Vue?"
-categories = ["Vue"]
-description = "Highlights benefits of local component registration"
-date = 2018-03-15T19:00:35+11:00
-+++
+---
+draft: false
+title: "Why use local component registrations in Vue?"
+categories: ["Vue"]
+description: "Highlights benefits of local component registration"
+date: 2018-03-15T19:00:35+11:00
+---
+# Registering Components in Vue
 
 Being new to [Vuejs](https://vuejs.org), I started registering my components globally so they are easily available to other components. That's what componentization is for, right? It turns out that in most cases that I've experienced, components are better off being registered locally.
 

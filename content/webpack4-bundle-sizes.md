@@ -1,10 +1,11 @@
-+++
-draft = false
-title = "Webpack 4 bundle sizes"
-categories = ["Webpack"]
-description = "Tweaking Webpack 4 bundle size"
-date = 2018-03-23T19:00:00+11:00
-+++
+---
+draft: false
+title: "Webpack 4 bundle sizes"
+categories: ["Webpack"]
+description: "Tweaking Webpack 4 bundle size"
+date: 2018-03-23T19:00:00+11:00
+---
+# Webpack 4 bundle sizes
 
 **TL;DR**: Analyze your Webpack bundles and tweak the default settings to achieve your performance goals. The default webpack settings are great but you can squeeze more out of it if need be.
 

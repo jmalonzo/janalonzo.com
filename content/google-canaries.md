@@ -1,10 +1,11 @@
-+++
-date = "2017-04-05T19:26:39+10:00"
-description = "Goog's canary release engineering"
-categories = ["Tech", "Release Engineering", "Bookmarks"]
-title = "Google Canaries"
-draft = false
-+++
+---
+date: "2017-04-05T19:26:39+10:00"
+description: "Goog's canary release engineering"
+categories: ["Tech", "Release Engineering", "Bookmarks"]
+title: "Google Canaries"
+draft: false
+---
+# Google Canaries
 
 There are some interesting release engineering and strategies in Google Cloud's blog post [How release canaries can save your bacon - CRE life lessons](https://cloudplatform.googleblog.com/2017/03/how-release-canaries-can-save-your-bacon-CRE-life-lessons.html).
 

@@ -1,10 +1,12 @@
-+++
-date = "2014-10-19T15:54:43+11:00"
-draft = false
-title = "TabPhones"
-categories = ["Tech", "Mobile", "Usability"]
-description = "Exploring the everyday usage of an 8.4' Galaxy Tab S as a 'phone'."
-+++
+---
+date: "2014-10-19T15:54:43+11:00"
+draft: false
+title: "TabPhones"
+categories: ["Tech", "Mobile", "Usability"]
+description: "Exploring the everyday usage of an 8.4' Galaxy Tab S as a 'phone'."
+---
+
+# Using Tables as Phonese
 
 I've always been curious about Tablets. I used to own the first
 version of the [Apple iPad](http://store.apple.com/au/ipad) but ended up giving it to my younger cousins.

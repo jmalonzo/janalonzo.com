@@ -1,11 +1,12 @@
-+++
-categories = ["Tech", "Photography", "Backups"]
-date = "2016-01-30T20:00:00+11:00"
-description = "Backing-up precious RAW/JPEG files are important. In this document I highlight the alternatives and best practices, in my experience, in backing up your photography assets."
-draft = false
-title = "Photo Backups"
+---
+categories: ["Tech", "Photography", "Backups"]
+date: "2016-01-30T20:00:00+11:00"
+description: "Backing-up precious RAW/JPEG files are important. In this document I highlight the alternatives and best practices, in my experience, in backing up your photography assets."
+draft: false
+title: "Photo Backups"
+---
 
-+++
+# Photo Backups
 
 Losing important photos of kids and family, or even a wedding job, can be heartbreaking. We’ve all been there and that is why I made a point to backup all my important files externally and, if possible, off-site. In this article we will cover some backup essentials and the different options on how to backup your photos to an external drive or a network-attached storage (NAS), and to a remote backup site.
 <!--more-->

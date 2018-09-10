@@ -1,10 +1,12 @@
-+++
-categories = ["Tech", "WebP", "Web", "AWS", "HTML5"]
-date = "2014-12-12T12:08:12+07:00"
-description = "How to serve both WebP and JPEG in an S3/Cloudfront static site"
-draft = false
-title = "WebP or JPEG in an AWS/S3 website"
-+++
+---
+categories: ["Tech", "WebP", "Web", "AWS", "HTML5"]
+date: "2014-12-12T12:08:12+07:00"
+description: "How to serve both WebP and JPEG in an S3/Cloudfront static site"
+draft: false
+title: "WebP or JPEG in an AWS/S3 website"
+---
+
+# Serving WebP on S3
 
 Part of why I built this site is so I can share the moments everytime
 I go and shoot sunrise. I want people,

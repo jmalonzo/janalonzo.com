@@ -1,11 +1,11 @@
-+++
-categories = ["Work", "Howtos"]
-date = "2016-02-07T13:00:00+07:00"
-description = "What I've learned working remotely over the past few years"
-draft = false
-title = "Remote Work — Staying Focused"
-
-+++
+---
+categories: ["Work", "Howtos"]
+date: "2016-02-07T13:00:00+07:00"
+description: "What I've learned working remotely over the past few years"
+draft: false
+title: "Remote Work — Staying Focused"
+---
+# Remote Work
 
 There are a lot of very good articles about remote work floating on the web so
 I will try not repeat them here. In this post I will highlight some of the things

@@ -1,0 +1,11 @@
+{
+    "name": "Jan Alonzo's b-log",
+    "short_name": "b-log",
+    "start_url": ".",
+    "display": "minimal-ui",
+    "background_color": "#fff",
+    "description": "Jan Alonzo's blog and random stuff",
+    "lang": "en-AU",
+    "orientation": "portrait-primary",
+    "scope": "/"
+}

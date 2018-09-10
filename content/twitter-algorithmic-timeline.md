@@ -1,11 +1,11 @@
-+++
-categories = ["Tech", "Twitter", "UX"]
-date = "2016-02-09T09:48:01+11:00"
-description = "A commentary on Twitter's proposed algorithmic timeline"
-draft = false
-title = "Twitter Algorithmic Timeline"
-
-+++
+---
+categories: ["Tech", "Twitter", "UX"]
+date: "2016-02-09T09:48:01+11:00"
+description: "A commentary on Twitter's proposed algorithmic timeline"
+draft: false
+title: "Twitter Algorithmic Timeline"
+---
+# Thoughts on Twitter's algorithmic timeline
 
 *This post first appeared in a <a href="https://medium.com/@jmalonzo/i-think-you-said-yourself-it-s-a-ux-nightmare-e7de0a217f23">Medium article.</a>*
 

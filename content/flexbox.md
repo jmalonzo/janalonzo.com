@@ -1,10 +1,12 @@
-+++
-categories = ["Tech", "Web", "Layout", "CSS"]
-date = "2015-03-01T17:30:46+11:00"
-description = "Flexbox is a new way to do layout in the web. Here are my thoughts."
-draft = false
-title = "Flexbox"
-+++
+---
+categories: ["Tech", "Web", "Layout", "CSS"]
+date: "2015-03-01T17:30:46+11:00"
+description: "Flexbox is a new way to do layout in the web. Here are my thoughts."
+draft: false
+title: "Flexbox"
+---
+
+# Flexbox
 
 I've been interested in newer web technologies lately due to my recent work
 assignment. I'm not a designer per se so when I started to design this site,

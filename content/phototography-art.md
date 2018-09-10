@@ -1,10 +1,12 @@
-+++
-categories = ["Photography", "Art"]
-date = "2015-03-30T09:06:02+11:00"
-description = "Looking at photography as art, and pushing boundaries."
-draft = false
-title = "Photography as Art"
-+++
+---
+categories: ["Photography", "Art"]
+date: "2015-03-30T09:06:02+11:00"
+description: "Looking at photography as art, and pushing boundaries."
+draft: false
+title: "Photography as Art"
+---
+
+# Photography as Art
 
 I've been doing a lot of photography (as a beginner) ever since I
 joined the [FOCUS](http://www.focusphotographers.org) group almost a

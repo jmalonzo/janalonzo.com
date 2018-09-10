@@ -1,10 +1,12 @@
-+++
-draft = false
-title = "Firefox Focus"
-categories = ["Tech", "UX"]
-description = "Great idea but not without a flaw"
-date = 2018-01-27T11:00:00+11:00
-+++
+---
+draft: false
+title: "Firefox Focus"
+categories: ["Tech", "UX"]
+description: "Great idea but not without a flaw"
+date: 2018-01-27T11:00:00+11:00
+---
+
+# Firefox Focus
 
 I've been using [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) in the last few months. It's a great product with ad-blocking and incognito-mode out-of-the-box, and this works perfectly if you're someone who opens an article and reads them straightaway.
 

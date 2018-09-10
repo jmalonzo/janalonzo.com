@@ -1,10 +1,12 @@
-+++
-draft = false
-date = "2017-03-22T20:00:00+11:00"
-description = "Thoughts about my writing in 2017"
-categories = ["thoughts"]
-title = "Rethinking Writing"
-+++
+---
+draft: false
+date: "2017-03-22T20:00:00+11:00"
+description: "Thoughts about my writing in 2017"
+categories: ["thoughts"]
+title: "Rethinking Writing"
+---
+
+# Learning how to write
 
 It's been more than a year since my last post here. When I first set this up I thought I'd be
 posting at least once a week. Since I was doing photography at that time, I thought that would be very easy - post my weekly photos, and a little bit of tech on the side and it will be good. But life caught up and it gave me a glimpsed that there's more to *this* and photography. I needed (and deserved) time away from the laptop.
