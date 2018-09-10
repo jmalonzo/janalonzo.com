@@ -9,7 +9,6 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: sudo dpkg -i hugo*.deb
       - run: npm install
       - run:
           name: "Building Vuepress site"
