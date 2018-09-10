@@ -6,12 +6,14 @@ footer: Copyright © 2018 Jan Michael Alonzo
 
 I'm Jan Michael and I love [tech](https://github.com/jmalonzo), [photography, and travel](https://instagram.com/jmalonzo).
 
-I'm a [Senior Dev](https://linkedin.com/in/jmalonzo) at [Taguchi](http://www.taguchi.com.au). Occassionally, I do [twitter](https://twitter.com/jmalonzo).
+I'm a [Senior Dev](https://linkedin.com/in/jmalonzo) at [Taguchi](http://www.taguchi.com.au) and I do [twitter](https://twitter.com/jmalonzo) occasionally.
 
-### Previous posts
+[PGP pubkey](https://keybase.io/jmalonzo)
 
-* [Webpack 4 bundle sizes](/webpack4-bundle-sizes.md)
-* [Vue component registration](/vuejs-component-registrations.md)
-* [Remote work](/remote-work.md)
-* [Serving WebP in Amazon S3](/s3-serving-webp.md)
-* [Yubikey](/yubikey.md)
+### Posts
+
+* [Webpack 4 bundle sizes](/post/webpack4-bundle-sizes.md)
+* [Vue component registration](/post/vuejs-component-registrations.md)
+* [Remote work](/post/remote-work.md)
+* [Serving WebP in Amazon S3](/post/s3-serving-webp.md)
+* [Yubikey](/post/yubikey.md)
