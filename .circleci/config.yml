@@ -1,7 +1,7 @@
 # .circleci/config.yml
 defaults: &defaults
   docker:
-    - image: circleci/node:9
+    - image: circleci/node:10
   working_directory: ~/project
 version: 2
 jobs:
@@ -9,17 +9,14 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
-      - run: wget https://github.com/gohugoio/hugo/releases/download/v0.40.3/hugo_0.40.3_Linux-64bit.deb
       - run: sudo dpkg -i hugo*.deb
-      - run: yarn
+      - run: npm install
       - run:
-          name: "Build Our Statically Generated Docs Website with Hugo"
-          command: HUGO_ENV=production npm run build
+          name: "Building Vuepress site"
+          command: npm run build
       - persist_to_workspace:
           root: ~/project
-          paths: public/
+          paths: dist/
   deploy:
     <<: *defaults
     steps:
@@ -34,9 +31,9 @@ jobs:
             python3.4 get-pip.py --user
             export PATH=$HOME/.local/bin:$PATH
             pip install awscli --upgrade --user
-            aws s3 sync public s3://janalonzo.com/ --delete
+            aws s3 sync dist s3://janalonzo.com/ --delete
             aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html /index.xml
+            aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /index.html
 workflows:
   version: 2
   build-deploy:
