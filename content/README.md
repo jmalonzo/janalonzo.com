@@ -1,6 +1,6 @@
 ---
 home: true
-footer: Copyright © 2018 Jan Michael Alonzo
+footer: Copyright © 2019 Jan Michael Alonzo
 ---
 # Hello :wave:
 

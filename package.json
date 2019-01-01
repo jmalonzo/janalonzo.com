@@ -1,11 +1,11 @@
 {
   "name": "janalonzo.com",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "private": true,
-  "devDependencies": {
-    "vuepress": "^0.14.4"
-  },
   "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^0.14.8"
+  },
   "scripts": {
     "clean": "rm -rf public static build tmp dist",
     "html-minifier": "html-minifier --remove-comments --collapse-whitespace --input-dir public",
