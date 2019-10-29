@@ -30,15 +30,14 @@ subjects that don't require beautiful skies. There are certainly
 plenty of things that I still don't know about photography,
 composition-wise and a way to express myself and leave an imprint in
 this world. I certainly don't want to look at my portfolio when I'm 80
-years old and never really *pushed* the boundaries of what's possible
+years old and never really _pushed_ the boundaries of what's possible
 in photography. Emphatic skies are, in my opinion, a tiny fraction of
 what makes a landscape photo great, more so what makes photography, in
 general, a worthwhile endeavour.
 
 And this is why starting today, I'm going to be more critical about
-myself and really find out what kind of *art* I want to represent who
+myself and really find out what kind of _art_ I want to represent who
 I am. I want my photography, and my photographs for that matter to
 last centuries, not just a lifetime. And to do that, I'm going to need
 to get closer to the masters, and hopefully improve on their works so
 that one day I will be recognised as one of them. Hopefully.
-
