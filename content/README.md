@@ -13,6 +13,7 @@ My [PGP public key](https://keybase.io/jmalonzo)
 
 ### Latest
 
+- [Moving on from Pixel to Note](/post/pixel-samsung.md)
 - [Living in Jakarta](/post/living-in-jakarta.md)
 - [Webpack 4 bundle sizes](/post/webpack4-bundle-sizes.md)
 - [Vue component registration](/post/vuejs-component-registrations.md)
