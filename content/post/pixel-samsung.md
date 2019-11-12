@@ -2,7 +2,7 @@
 date: "2019-11-05T22:00:00+07:00"
 draft: false
 title: "Moving on from Pixel to the Note"
-categories: ["Tech", "Mobile", "Usability"]
+categories: ["Mobile", "Usability"]
 description: "Why I moved to the Note 10+ from the Pixel 2 XL"
 ---
 
