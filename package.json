@@ -2,8 +2,11 @@
   "name": "janalonzo.com",
   "version": "3.4.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "vuepress-theme-yuu": "^2.2.1"
+  },
   "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.2.0",
     "vuepress": "^1.2.0"
   },
   "scripts": {

@@ -1,6 +1,7 @@
 ---
 home: true
-footer: Copyright © 2019 Jan Michael Alonzo
+footer: Copyright © 2020 Jan Michael Alonzo
+sidebar: false
 ---
 
 # Hello :wave:
@@ -13,6 +14,7 @@ My [PGP public key](https://keybase.io/jmalonzo)
 
 ### Latest
 
+- [Running](/post/running.md)
 - [Moving on from Pixel to Note](/post/pixel-samsung.md)
 - [Living in Jakarta](/post/living-in-jakarta.md)
 - [Webpack 4 bundle sizes](/post/webpack4-bundle-sizes.md)
