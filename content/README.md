@@ -14,6 +14,7 @@ My [PGP public key](https://keybase.io/jmalonzo)
 
 ### Latest
 
+- [Switching to Twitter app](/post/pwa-or-native-twitter.md)
 - [Shoot RAW and JPEG](/post/why-shoot-raw-jpeg.md)
 - [Running](/post/running.md)
 - [Moving on from Pixel to Note](/post/pixel-samsung.md)
