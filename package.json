@@ -3,10 +3,8 @@
   "version": "3.4.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf _site",
-    "html-minifier": "html-minifier --remove-comments --collapse-whitespace --input-dir public",
-    "copy-assets": "cp assets/* public/",
-    "build": "npm run clean && npx @11ty/eleventy && cp _assets/* _site/",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npx @11ty/eleventy --output=dist && cp _assets/* dist/",
     "start": "npx @11ty/eleventy --serve"
   }
 }
