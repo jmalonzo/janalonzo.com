@@ -5,7 +5,6 @@ categories: ["Webpack"]
 description: "Tweaking Webpack 4 bundle size"
 date: 2018-03-23T19:00:00+11:00
 ---
-# Webpack 4 bundle sizes
 
 **TL;DR**: Analyze your Webpack bundles and tweak the default settings to achieve your performance goals. The default webpack settings are great but you can squeeze more out of it if need be.
 
@@ -17,7 +16,6 @@ In version 4, we had to throw away our CommonsChunk setup since the new version 
 
 Analyzing our bundles with [bundle-buddy](https://github.com/samccone/bundle-buddy), I'm seeing a (26k-sized) node package included in at least 7 bundles! Well, that's not right. The app is an SPA and including redundant code in 7 bundles just loads more code than it needs to. The surprising thing here is most of the third-party code was correctly placed in a vendor bundle except for this one.
 
-In v4, there's a *splitChunks* config to specify a minimum chunk size before webpack needs to split the bundle. The option is *minSize* and the default is 30000 (bytes). So in this case, I wanted to force webpack to put the package in the vendor bundle so I tweaked the *minSize* to 25000. Sure enough that worked and the results from bundle-buddy was clear of any oversized third-party code.
+In v4, there's a _splitChunks_ config to specify a minimum chunk size before webpack needs to split the bundle. The option is _minSize_ and the default is 30000 (bytes). So in this case, I wanted to force webpack to put the package in the vendor bundle so I tweaked the _minSize_ to 25000. Sure enough that worked and the results from bundle-buddy was clear of any oversized third-party code.
 
-My next task will be looking at *cacheGroups* and split the vendor code as that's one of the biggest chunks in the app to date. Webpack now looks at bundle size and even though that makes sense for most cases, sometimes bundle groupings are more important where it makes sense, regardless of package size.
-
+My next task will be looking at _cacheGroups_ and split the vendor code as that's one of the biggest chunks in the app to date. Webpack now looks at bundle size and even though that makes sense for most cases, sometimes bundle groupings are more important where it makes sense, regardless of package size.
