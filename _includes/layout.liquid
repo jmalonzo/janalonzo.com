@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Log - Jan Alonzo</title>
+        <meta name="description" content="Jan Alonzo's blog">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Roboto Mono', monospace;
+                font-size: 0.9rem;
+                margin: 3em;
+            }
+            .description {
+                font-size: 0.8rem;
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>{{ title }}</h1>
+        <p class="description">
+            {% if date %}
+                {{ date | date: "%Y-%m-%d" }} &mdash;
+            {% endif %}
+            <em>{{ description }}</em>
+        </p>
+        {{ content }}
+    </body>
+</html>
